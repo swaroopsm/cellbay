@@ -13,6 +13,7 @@
 
     <!-- Le styles -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">	
     <style type="text/css">
       body {
         padding-top: 60px;
@@ -24,6 +25,14 @@
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
     <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+    <link rel="stylesheet" href="css/flexslider.css" type="text/css">
+    <script src="js/jquery.min.js"></script>
+   <script src="js/jquery.flexslider.js"></script>
+<script type="text/javascript" charset="utf-8">
+  $(window).load(function() {
+    $('.flexslider').flexslider();
+  });
+</script>
   </head>
 
   <body>
@@ -45,9 +54,22 @@
 
       <!-- Main hero unit for a primary marketing message or call to action -->
       <div class="hero-unit">
-        <h1>Hello, world!</h1>
-        <p>Vestibulum id ligula porta felis euismod semper. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
-        <p><a class="btn primary large">Learn more &raquo;</a></p>
+        <div class="flexslider" style="">
+  <ul class="slides">
+    <li>
+      <img src="images/header2.jpg" height="340" alt="text1"/>
+    </li>
+    <li>
+      <img src="images/header1.jpg" height="340" alt="text2"/>
+    </li>
+    <li>
+      <img src="images/header3.jpg" height="340" alt="text3"/>
+    </li>
+    <li>
+      <img src="images/header4.jpg" height="340" alt="text3"/>
+    </li>
+  </ul>
+</div>
       </div>
 
       <!-- Example row of columns -->
