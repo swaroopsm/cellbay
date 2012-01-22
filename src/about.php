@@ -40,17 +40,12 @@
     <div class="topbar">
       <div class="fill">
         <div class="container">
-          <a class="brand" href="#">CellBay</a>
+          <a class="brand" href="index.php" style="">CellBay</a>
           <ul class="nav">
-            <li class="active"><a href="index.php">Home</a></li>
-            <li><a href="about.php">About</a></li>
+            <li><a href="index.php">Home</a></li>
+            <li  class="active"><a href="about.php">About</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
-<table>
-<tr>
-
-</tr>
-</table>
 <form action="" class="pull-right">
             <input class="input-small" type="text" placeholder="Username">
             <input class="input-small" type="password" placeholder="Password">
@@ -60,67 +55,21 @@
       </div>
     </div>
 
-    <div class="container">
+   <div class="container">
 
-      <!-- Main hero unit for a primary marketing message or call to action -->
-      <div class="hero-unit">
-        <div class="flexslider" style="">
-  <ul class="slides">
-    <li>
-      <img src="images/header2.jpg" height="340" alt="text1"/>
-    </li>
-    <li>
-      <img src="images/header1.jpg" height="340" alt="text2"/>
-    </li>
-    <li>
-      <img src="images/header3.jpg" height="340" alt="text3"/>
-    </li>
-    <li>
-      <img src="images/header4.jpg" height="340" alt="text3"/>
-    </li>
-  </ul>
-</div>
-      </div>
-
-      <!-- Example row of columns -->
-      <div class="row">
-        <div class="span-one-third">
-          <h2>Mobile 1</h2>
-              <ul class="media-grid">
-    <li>
-    <a href="#">
-    <img class="thumbnail" src="http://placehold.it/250x180" alt="">
-    </a>
-    </li>
-    </ul>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
+      <div class="content">
+        <div class="page-header">
+          <h1>About Us</h1>
         </div>
-        <div class="span-one-third">
-          <h2>Mobile 2</h2>
-               <ul class="media-grid">
-    <li>
-    <a href="#">
-    <img class="thumbnail" src="http://placehold.it/250x180" alt="">
-    </a>
-    </li>
-    </ul>
- <p><a class="btn" href="#">View details &raquo;</a></p>
-       </div>
-        <div class="span-one-third">
-          <h2>Mobile 3</h2>
-             <ul class="media-grid">
-    <li>
-    <a href="#">
-    <img class="thumbnail" src="http://placehold.it/250x180" alt="">
-    </a>
-    </li>
-    </ul>
- <p><a class="btn" href="#">View details &raquo;</a></p>
+        <div class="row">
+          <div class="span9">
+<p style="font-family: myfont;">hjihj</p>
+          </div>
         </div>
       </div>
 
       <footer>
-        <p>&copy CellBay 2012</p>
+        <p>&copy; Company 2012</p>
       </footer>
 
     </div> <!-- /container -->
