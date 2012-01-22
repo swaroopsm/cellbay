@@ -31,6 +31,8 @@
 <script type="text/javascript" charset="utf-8">
   $(window).load(function() {
     $('.flexslider').flexslider();
+
+$('a.dropdown-toggle').click(function()  {$('li.dropdown').toggleClass('open') } );
   });
 </script>
   </head>
@@ -52,19 +54,16 @@
 
           </ul>
 
-<ul class="nav secondary-nav">
-<li class="dropdown">
-<a class="dropdown-toggle" href="#">Dropdown</a>
-<ul class="dropdown-menu">
-<li>
-<a href="#">Secondary link</a>
-</li>
-<li>
-<a href="#">Something else here</a>
-</li>
+<ul class="nav secondary-nav" >
+<li class="dropdown" id="login">
+<a class="dropdown-toggle" id="" href="#">Login</a>
+<ul class="dropdown-menu" style="width: 300px;padding-left: 10px;padding-top: 20px;">
+<li><input type="text" style="width: 180px;" name="uname" placeholder="Username"/></li>
+<br>
+<li><input type="password" style="width: 180px;" name="password" placeholder="Password"/></li>
 <li class="divider"></li>
 <li>
-<a href="#">Another link</a>
+<button class="btn">Login &raquo</button>
 </li>
 </ul>
 </li>
