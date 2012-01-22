@@ -42,25 +42,40 @@
         <div class="container">
           <a class="brand" href="#">CellBay</a>
           <ul class="nav">
+
             <li class="active"><a href="index.php">Home</a></li>
+
+            <li class="active"><a href="#">Home</a></li>
+
             <li><a href="about.php">About</a></li>
             <li><a href="#contact">Contact</a></li>
-          </ul>
-<table>
-<tr>
 
-</tr>
-</table>
-<form action="" class="pull-right">
-            <input class="input-small" type="text" placeholder="Username">
-            <input class="input-small" type="password" placeholder="Password">
-            <button class="btn" type="submit">Sign in</button>
-          </form>
+          </ul>
+
+<ul class="nav secondary-nav">
+<li class="dropdown">
+<a class="dropdown-toggle" href="#">Dropdown</a>
+<ul class="dropdown-menu">
+<li>
+<a href="#">Secondary link</a>
+</li>
+<li>
+<a href="#">Something else here</a>
+</li>
+<li class="divider"></li>
+<li>
+<a href="#">Another link</a>
+</li>
+</ul>
+</li>
+</ul>
+
+
         </div>
       </div>
     </div>
-
     <div class="container">
+
 
       <!-- Main hero unit for a primary marketing message or call to action -->
       <div class="hero-unit">
