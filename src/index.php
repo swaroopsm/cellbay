@@ -36,6 +36,9 @@ $('a.dropdown-toggle').click(function()  {$('li.dropdown').toggleClass('open') }
 $('#formClose').click(function(){
 $('#modal-from-dom').modal('hide');
 });
+$('#joinBtn').click(function(){
+
+});
   });
 </script>
   </head>
@@ -152,13 +155,14 @@ $('#modal-from-dom').modal('hide');
 <h3>Sign Up</h3>
 </div>
 <div class="modal-body">
+<form action="response.php?class=users&module=signup" method="post">
 <tr>
 <td>Your Name:
 <td>&nbsp;
 <td>&nbsp;
 <td>&nbsp;
 <td>&nbsp;
-<td><input type="text" placeholder="This will be your Display Name"/>
+<td><input name="uname" type="text" placeholder="This will be your Display Name"/>
 </tr>
 <tr>
 <td><br>
@@ -172,7 +176,7 @@ $('#modal-from-dom').modal('hide');
 <td>&nbsp;
 <td>&nbsp;
 <td>&nbsp;
-<td><input type="text" placeholder="This will be username"/>
+<td><input name="uemail" type="text" placeholder="This will be username"/>
 </tr>
 <tr>
 <td><br>
@@ -183,13 +187,15 @@ $('#modal-from-dom').modal('hide');
 <tr>
 <td>Your Password: </td>
 <td>&nbsp;
-<td><input type="password" placeholder="This will be used to login"/>
+<td><input name="upassword" type="password" placeholder="This will be used to login"/>
 </tr>
 </div>
 <div class="modal-footer">
 <a class="btn danger" id="formClose" href="#">Cancel</a>
-<a class="btn success" href="#">Submit</a>
+<a class="btn success" id="joinBtn" href="#">Submit</a>
+<input type='submit' value="go"/>
 </div>
+</form>
 </div>
     </div> <!-- /container -->
 
