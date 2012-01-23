@@ -33,6 +33,9 @@
   $(window).load(function() {
     $('.flexslider').flexslider();
 $('a.dropdown-toggle').click(function()  {$('li.dropdown').toggleClass('open') } );
+$('#formClose').click(function(){
+$('#modal-from-dom').modal('hide');
+});
   });
 </script>
   </head>
@@ -78,7 +81,7 @@ $('a.dropdown-toggle').click(function()  {$('li.dropdown').toggleClass('open') }
     <div class="container">
 <ul style="float: right;list-style-type: none;margin-right: 10px;">
 <li>
-		<button style="margin-top: 5px;" class="btn success" data-keyboard="true" data-backdrop="static" data-controls-modal="modal-from-dom">Sign Up</button>
+		<button style="margin-top: 5px;" class="btn success"  data-keyboard="true"  data-backdrop="static" data-controls-modal="modal-from-dom">Sign Up</button>
 	    </li>
 </ul>
       <!-- Main hero unit for a primary marketing message or call to action -->
@@ -143,17 +146,49 @@ $('a.dropdown-toggle').click(function()  {$('li.dropdown').toggleClass('open') }
       <footer>
         <p>&copy CellBay 2012</p>
       </footer>
-<div id="modal-from-dom" class="modal hide fade in" style="display: none;">
+<div id="modal-from-dom" class="modal hide fade in" style="display: none;border: 8px solid #ccc;">
 <div class="modal-header">
 <a class="close" href="#">×</a>
-<h3>Modal Heading</h3>
+<h3>Sign Up</h3>
 </div>
 <div class="modal-body">
-<p>One fine body…</p>
+<tr>
+<td>Your Name:
+<td>&nbsp;
+<td>&nbsp;
+<td>&nbsp;
+<td>&nbsp;
+<td><input type="text" placeholder="This will be your Display Name"/>
+</tr>
+<tr>
+<td><br>
+</tr>
+<tr>
+<td><br>
+</tr>
+<tr>
+<td>Your Email: </td>
+<td>&nbsp;
+<td>&nbsp;
+<td>&nbsp;
+<td>&nbsp;
+<td><input type="text" placeholder="This will be username"/>
+</tr>
+<tr>
+<td><br>
+</tr>
+<tr>
+<td><br>
+</tr>
+<tr>
+<td>Your Password: </td>
+<td>&nbsp;
+<td><input type="password" placeholder="This will be used to login"/>
+</tr>
 </div>
 <div class="modal-footer">
-<a class="btn primary" href="#">Primary</a>
-<a class="btn secondary" href="#">Secondary</a>
+<a class="btn danger" id="formClose" href="#">Cancel</a>
+<a class="btn success" href="#">Submit</a>
 </div>
 </div>
     </div> <!-- /container -->
