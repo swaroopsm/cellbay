@@ -30,27 +30,46 @@
    <script src="js/jquery.flexslider.js"></script>
 <script type="text/javascript" charset="utf-8">
   $(window).load(function() {
-    $('.flexslider').flexslider();
+$('a.dropdown-toggle').click(function()  {$('li.dropdown').toggleClass('open') } );
   });
 </script>
   </head>
 
   <body>
 
-    <div class="topbar">
+   <div class="topbar">
       <div class="fill">
         <div class="container">
-          <a class="brand" href="index.php" style="">CellBay</a>
+          <a class="brand" href="index.php">CellBay</a>
           <ul class="nav">
+
             <li><a href="index.php">Home</a></li>
-            <li  class="active"><a href="about.php">About</a></li>
+
+           
+
+            <li class="active"><a href="about.php">About</a></li>
             <li><a href="#contact">Contact</a></li>
+
           </ul>
-<form action="" class="pull-right">
-            <input class="input-small" type="text" placeholder="Username">
-            <input class="input-small" type="password" placeholder="Password">
-            <button class="btn" type="submit">Sign in</button>
-          </form>
+
+<ul class="nav secondary-nav" >
+<li class="dropdown" id="login">
+<a class="dropdown-toggle" id="" href="#">Login</a>
+<ul class="dropdown-menu" style="width: 300px;padding-left: 10px;padding-top: 20px;">
+<form action="checklogin.php" method="post">
+<li><input type="text" style="width: 180px;" name="uname" placeholder="Username"/></li>
+<br>
+<li><input type="password" style="width: 180px;" name="password" placeholder="Password"/></li>
+<li class="divider"></li>
+<li>
+<button class="btn">Login &raquo</button>
+</li>
+</form>
+</ul>
+</li>
+</ul>
+
+
         </div>
       </div>
     </div>
@@ -69,7 +88,7 @@
       </div>
 
       <footer>
-        <p>&copy; Company 2012</p>
+        <p>&copy; CellBay 2012</p>
       </footer>
 
     </div> <!-- /container -->

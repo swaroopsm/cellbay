@@ -7,7 +7,7 @@ if($_SESSION['loggedin']==true)
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Bootstrap, from Twitter</title>
+    <title>Welcome to CellBay Pal!</title>
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -76,6 +76,12 @@ if($_SESSION['loggedin']==true)
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
     <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+$('a.dropdown-toggle').click(function()  {$('li.dropdown').toggleClass('open') } );
+});
+</script>
   </head>
 
   <body>
@@ -97,16 +103,8 @@ if($_SESSION['loggedin']==true)
 <ul class="nav secondary-nav" >
 <li class="dropdown" id="login">
 <a class="dropdown-toggle" id="" href="#">Account</a>
-<ul class="dropdown-menu" style="width: 300px;padding-left: 10px;padding-top: 20px;">
-<form action="checklogin.php" method="post">
-<li><input type="text" style="width: 180px;" name="uname" placeholder="Username"/></li>
-<br>
-<li><input type="password" style="width: 180px;" name="password" placeholder="Password"/></li>
-<li class="divider"></li>
-<li>
-<button class="btn">Login &raquo</button>
-</li>
-</form>
+<ul class="dropdown-menu" style="width: 300px;padding-left: 10px;padding-top: 10px;">
+<li><a href="#">Link1</a></li>
 </ul>
 </li>
 </ul>
@@ -132,7 +130,7 @@ if($_SESSION['loggedin']==true)
       </div>
 
       <footer>
-        <p>&copy; Company 2012</p>
+        <p>&copy; CellBay 2012</p>
       </footer>
 
     </div> <!-- /container -->

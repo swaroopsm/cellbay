@@ -42,12 +42,12 @@ $('a.dropdown-toggle').click(function()  {$('li.dropdown').toggleClass('open') }
     <div class="topbar">
       <div class="fill">
         <div class="container">
-          <a class="brand" href="#">CellBay</a>
+          <a class="brand" href="index.php">CellBay</a>
           <ul class="nav">
 
             <li class="active"><a href="index.php">Home</a></li>
 
-            <li class="active"><a href="#">Home</a></li>
+           
 
             <li><a href="about.php">About</a></li>
             <li><a href="#contact">Contact</a></li>
