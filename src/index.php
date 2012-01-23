@@ -28,10 +28,10 @@
     <link rel="stylesheet" href="css/flexslider.css" type="text/css">
     <script src="js/jquery.min.js"></script>
    <script src="js/jquery.flexslider.js"></script>
+   <script src="js/bootstrap.modal.js"></script>
 <script type="text/javascript" charset="utf-8">
   $(window).load(function() {
     $('.flexslider').flexslider();
-
 $('a.dropdown-toggle').click(function()  {$('li.dropdown').toggleClass('open') } );
   });
 </script>
@@ -51,7 +51,7 @@ $('a.dropdown-toggle').click(function()  {$('li.dropdown').toggleClass('open') }
 
             <li><a href="about.php">About</a></li>
             <li><a href="#contact">Contact</a></li>
-
+	    
           </ul>
 
 <ul class="nav secondary-nav" >
@@ -76,11 +76,16 @@ $('a.dropdown-toggle').click(function()  {$('li.dropdown').toggleClass('open') }
       </div>
     </div>
     <div class="container">
-
-
+<ul style="float: right;list-style-type: none;margin-right: 10px;">
+<li>
+		<button style="margin-top: 5px;" class="btn success" data-keyboard="true" data-backdrop="static" data-controls-modal="modal-from-dom">Sign Up</button>
+	    </li>
+</ul>
       <!-- Main hero unit for a primary marketing message or call to action -->
       <div class="hero-unit">
+
         <div class="flexslider" style="">
+
   <ul class="slides">
     <li>
       <img src="images/header2.jpg" height="340" alt="text1"/>
@@ -138,7 +143,19 @@ $('a.dropdown-toggle').click(function()  {$('li.dropdown').toggleClass('open') }
       <footer>
         <p>&copy CellBay 2012</p>
       </footer>
-
+<div id="modal-from-dom" class="modal hide fade in" style="display: none;">
+<div class="modal-header">
+<a class="close" href="#">×</a>
+<h3>Modal Heading</h3>
+</div>
+<div class="modal-body">
+<p>One fine body…</p>
+</div>
+<div class="modal-footer">
+<a class="btn primary" href="#">Primary</a>
+<a class="btn secondary" href="#">Secondary</a>
+</div>
+</div>
     </div> <!-- /container -->
 
   </body>
