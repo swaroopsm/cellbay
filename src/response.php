@@ -6,7 +6,8 @@ switch($class){
 case 'users':	include("includes/class.user.php"); 
 		if(isset($_GET['module'])){
 		switch($_GET['module']){
-		case 'signup': echo $_POST['uname'];
+		case 'signup':  $fields=array('');
+			 	$values=array();
 				break;
 		}
 		}
