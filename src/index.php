@@ -31,13 +31,25 @@
    <script src="js/bootstrap.modal.js"></script>
 <script type="text/javascript" charset="utf-8">
   $(window).load(function() {
+  
     $('.flexslider').flexslider();
 $('a.dropdown-toggle').click(function()  {$('li.dropdown').toggleClass('open') } );
 $('#formClose').click(function(){
 $('#modal-from-dom').modal('hide');
 });
 $('#joinBtn').click(function(){
-
+$("div#test").append("<img src='images/loader.gif' width='30' height='30'/>");
+var uname=$("#uname").val();
+var uemail=$("#uemail").val();
+var upwd=$("#upassword").val();
+/*$.post("response.php?class=users&module=signup",{uname: uname, uemail: uemail, upwd: upwd},
+function(data){
+});*/
+//$("#successMsg").hide();
+//$("#successMsg").fadeIn(500);
+$("#uname").val('');
+$("#uemail").val('');
+$("#upassword").val('');
 });
   });
 </script>
@@ -59,7 +71,9 @@ $('#joinBtn').click(function(){
             <li><a href="#contact">Contact</a></li>
 	    
           </ul>
+<tr>
 
+</tr>
 <ul class="nav secondary-nav" >
 <li class="dropdown" id="login">
 <a class="dropdown-toggle" id="" href="#">Login</a>
@@ -82,6 +96,7 @@ $('#joinBtn').click(function(){
       </div>
     </div>
     <div class="container">
+    
 <ul style="float: right;list-style-type: none;margin-right: 10px;">
 <li>
 		<button style="margin-top: 5px;" class="btn success"  data-keyboard="true"  data-backdrop="static" data-controls-modal="modal-from-dom">Sign Up</button>
@@ -155,14 +170,15 @@ $('#joinBtn').click(function(){
 <h3>Sign Up</h3>
 </div>
 <div class="modal-body">
-<form action="response.php?class=users&module=signup" method="post">
+<div  id="test"></div>
+
 <tr>
 <td>Your Name:
 <td>&nbsp;
 <td>&nbsp;
 <td>&nbsp;
 <td>&nbsp;
-<td><input name="uname" type="text" placeholder="This will be your Display Name"/>
+<td><input id="uname" type="text" placeholder="This will be your Display Name"/>
 </tr>
 <tr>
 <td><br>
@@ -176,7 +192,7 @@ $('#joinBtn').click(function(){
 <td>&nbsp;
 <td>&nbsp;
 <td>&nbsp;
-<td><input name="uemail" type="text" placeholder="This will be username"/>
+<td><input id="uemail" type="text" placeholder="This will be username"/>
 </tr>
 <tr>
 <td><br>
@@ -187,15 +203,14 @@ $('#joinBtn').click(function(){
 <tr>
 <td>Your Password: </td>
 <td>&nbsp;
-<td><input name="upassword" type="password" placeholder="This will be used to login"/>
+<td><input id="upassword" type="password" placeholder="This will be used to login"/>
 </tr>
 </div>
 <div class="modal-footer">
 <a class="btn danger" id="formClose" href="#">Cancel</a>
 <a class="btn success" id="joinBtn" href="#">Submit</a>
-<input type='submit' value="go"/>
 </div>
-</form>
+    
 </div>
     </div> <!-- /container -->
 
