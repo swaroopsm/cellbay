@@ -4,12 +4,13 @@ private $uid,$uname,$uemail,$upwd,$ugender,$udob,$ujdate,$uprof,$uimage,$torders
 
 public function __construct()
 {
-$argv = func_get_args();
+/*$argv = func_get_args();
 $argc = func_num_args();
 if($argc==1)
 call_user_func_array(array($this,'view'),$argv);
 if($i>1)
-call_user_func_array(array($this,'create'),$argv);
+call_user_func_array(array($this,'create'),$argv);*/
+echo "Constructor!";
 }
 
 public function view($uid){
@@ -28,7 +29,7 @@ if(!is_array($fields) || !is_array($values))
         $query1 = "INSERT INTO `users` (`";
         $query1 .= implode('`, `', $fields) . "`) VALUES ('";
         $query1 .= implode("', '", $values) . "')";
-        $exec=query($query1);
+        $exec=mysql_query($query1);
         return $exec;
 
 }
