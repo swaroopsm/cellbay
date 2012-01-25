@@ -38,7 +38,7 @@ $('#formClose').click(function(){
 $('#modal-from-dom').modal('hide');
 });
 $('#joinBtn').click(function(){
-$("div#test").append("<img src='images/loader.gif' width='30' height='30'/>");
+$("div#loader").append("<img src='images/loader.gif' width='30' height='30'/>");
 var uname=$("#uname").val();
 var uemail=$("#uemail").val();
 var upwd=$("#upassword").val();
@@ -170,7 +170,7 @@ $("#upassword").val('');
 <h3>Sign Up</h3>
 </div>
 <div class="modal-body">
-<div  id="test"></div>
+<center><div  id="loader"></div></center>
 
 <tr>
 <td>Your Name:
