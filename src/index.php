@@ -127,33 +127,33 @@ $("#upassword").val('');
       <!-- Example row of columns -->
       <div class="row">
         <div class="span-one-third">
-          <h2>Mobile 1</h2>
+          <h2>Samsung Galaxy S2</h2>
               <ul class="media-grid">
     <li>
     <a href="#">
-    <img class="thumbnail" src="http://placehold.it/250x180" alt="">
+   <img class="thumbnail" src="images/model1.jpg" width="250" height="180" alt="">
     </a>
     </li>
     </ul>
           <p><a class="btn" href="#">View details &raquo;</a></p>
         </div>
         <div class="span-one-third">
-          <h2>Mobile 2</h2>
+          <h2>iPhone 4S</h2>
                <ul class="media-grid">
     <li>
     <a href="#">
-    <img class="thumbnail" src="http://placehold.it/250x180" alt="">
+    <img class="thumbnail" src="images/model2.jpg" width="250" height="180" alt="">
     </a>
     </li>
     </ul>
  <p><a class="btn" href="#">View details &raquo;</a></p>
        </div>
         <div class="span-one-third">
-          <h2>Mobile 3</h2>
+          <h2>hTc Wildfire</h2>
              <ul class="media-grid">
     <li>
     <a href="#">
-    <img class="thumbnail" src="http://placehold.it/250x180" alt="">
+    <img class="thumbnail" src="images/model3.jpg" width="250" height="180" alt="">
     </a>
     </li>
     </ul>
