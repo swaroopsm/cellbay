@@ -47,8 +47,6 @@ function(data){
 $("div#loader").hide();
 $("div#msg").append("<div class='alert-message success'><p><strong>You have successfully signed up! Login to continue...</p></div>").hide().slideDown(1000);
 });
-//$("#successMsg").hide();
-//$("#successMsg").fadeIn(500);
 $("#uname").val('');
 $("#uemail").val('');
 $("#upassword").val('');
@@ -80,7 +78,7 @@ $("#upassword").val('');
 <li class="dropdown" id="login">
 <a class="dropdown-toggle" id="" href="#">Login</a>
 <ul class="dropdown-menu" style="width: 300px;padding-left: 10px;padding-top: 20px;">
-<form action="checklogin.php" method="post">
+<form action="response.php?class=users&module=checklogin" method="post">
 <li><input type="text" style="width: 180px;" name="uname" placeholder="Username"/></li>
 <br>
 <li><input type="password" style="width: 180px;" name="password" placeholder="Password"/></li>
