@@ -42,9 +42,11 @@ $("div#loader").append("<img src='images/loader.gif' width='30' height='30'/>");
 var uname=$("#uname").val();
 var uemail=$("#uemail").val();
 var upwd=$("#upassword").val();
-/*$.post("response.php?class=users&module=signup",{uname: uname, uemail: uemail, upwd: upwd},
+$.post("response.php?class=users&module=signup",{uname: uname, uemail: uemail, upwd: upwd},
 function(data){
-});*/
+$("div#loader").hide();
+$("div#msg").append("<div class='alert-message success'><p><strong>You have successfully signed up! Login to continue...</p></div>").hide().slideDown(1000);
+});
 //$("#successMsg").hide();
 //$("#successMsg").fadeIn(500);
 $("#uname").val('');
@@ -171,7 +173,9 @@ $("#upassword").val('');
 </div>
 <div class="modal-body">
 <center><div  id="loader"></div></center>
+<div id="msg">
 
+</div>
 <tr>
 <td>Your Name:
 <td>&nbsp;
