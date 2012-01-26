@@ -10,7 +10,7 @@ if($argc==1)
 call_user_func_array(array($this,'view'),$argv);
 if($i>1)
 call_user_func_array(array($this,'create'),$argv);*/
-echo "Constructor!";
+//echo "Constructor!";
 }
 
 public function view($uid){
@@ -29,47 +29,47 @@ public function view($uid){
 	$this->loid=$row['LastOrderID'];
 }
 
-public static getUID(){
+public function getUID(){
 	return $this->uid;
 }
 
-public static getUname(){
+public function getUname(){
 	return $this->uname;
 }
 
-public static getUEmail(){
+public function getUEmail(){
 	return $this->uemail;
 }
 
-public static getUPwd(){
+public function getUPwd(){
 	return $this->upwd;
 }
 
-public static getUGender(){
+public function getUGender(){
 	return $this->ugender;
 }
 
-public static getUDOB(){
+public function getUDOB(){
 	return $this->udob;
 }
 
-public static getUJDate(){
+public function getUJDate(){
 	return $this->ujdate;
 }
 
-public static getUProf(){
+public function getUProf(){
 	return $this->uprof;
 }
 
-public static getUImage(){
+public function getUImage(){
 	return $this->uimage;
 }
 
-public static getTorders(){
+public function getTorders(){
 	return $this->torders;
 }
 
-public static getLoid(){
+public function getLoid(){
 	return $this->loid;
 }
 
