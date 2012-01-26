@@ -64,7 +64,7 @@ $("#upassword").val('');
           <ul class="nav">
 
             <li class="active"><a href="index.php">Home</a></li>
-
+				<li><a href="products.php">Products</a></li>
            
 
             <li><a href="about.php">About</a></li>
