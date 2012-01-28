@@ -1,4 +1,5 @@
 <?php
+session_start();
 //echo $_GET['module'];
 if(isset($_GET['class'])){
 include("includes/functions.php");
@@ -23,10 +24,10 @@ case 'users':	include("includes/class.users.php");
 									if(mysql_num_rows($sql)==1){
 										$_SESSION['loggedin']=true;
 										$_SESSION['uname']=$uname;
-										//header("location: dashboard.php");
+										header("location: dashboard.php");
 									}
 									else
-										//header("location: index.php");
+										header("location: index.php");
 									break;
 		}
 		}
