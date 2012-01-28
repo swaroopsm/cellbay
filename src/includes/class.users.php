@@ -85,7 +85,7 @@ if(!is_array($fields) || !is_array($values))
         $query1 = "INSERT INTO `users` (`";
         $query1 .= implode('`, `', $fields) . "`) VALUES ('";
         $query1 .= implode("', '", $values) . "')";
-        $exec=mysql_query($query1);
+        $exec=dbquery($query1);
         return $exec;
 
 }
