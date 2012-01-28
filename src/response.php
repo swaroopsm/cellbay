@@ -18,10 +18,10 @@ case 'users':	include("includes/class.users.php");
 				
 		case 'checklogin': 	$uname=$_POST['uname'];
 									$pwd=md5($_POST['password']);
-									
-									$sql=dbquery("SELECT * FROM users WHERE UserEmail='$uname' AND UserPassword='$pwd'");
-									echo mysql_num_rows($sql);
-									if(mysql_num_rows($sql)==1){
+									$where="UserEmail='$uname' AND UserPassword='$pwd'";
+									$sql=frameQuery("users","*",$where);
+									$query=dbquery($sql);
+									if(numRows($query)==1){
 										$_SESSION['loggedin']=true;
 										$_SESSION['uname']=$uname;
 										header("location: dashboard.php");
