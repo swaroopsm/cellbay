@@ -44,12 +44,17 @@ var uemail=$("#uemail").val();
 var upwd=$("#upassword").val();
 $.post("response.php?class=users&module=signup",{uname: uname, uemail: uemail, upwd: upwd},
 function(data){
-$("div#loader").hide();
-$("div#msg").append("<div class='alert-message success'><p><strong>You have successfully signed up! Login to continue...</p></div>").hide().slideDown(1000);
+$("div#loader").hide()
+$("div#msg").html("<div class='alert-message success'><p><strong>You have successfully signed up! Login to continue...</p></div>").hide().slideDown(1000);
 });
+
 $("#uname").val('');
 $("#uemail").val('');
 $("#upassword").val('');
+$("div#msg").html();
+setTimeout(function(){
+$("div#msg").slideUp(500);
+},2500);
 });
   });
 </script>
