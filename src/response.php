@@ -1,6 +1,5 @@
 <?php
-session_start();
-//echo $_GET['module'];
+//session_start();
 if(isset($_GET['class'])){
 include("includes/functions.php");
 $class=$_GET['class'];
@@ -34,5 +33,15 @@ case 'users':	include("includes/class.users.php");
 		break;
 	}
 	
+}
+else{
+	if(isset($_GET['misc'])){
+		include("includes/functions.php");
+		$module=$_GET['misc'];
+		switch($module){
+			case 'logout':	logout('loggedin','index.php');
+									break;
+		}
+	}
 }
 ?>
