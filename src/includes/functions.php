@@ -72,5 +72,9 @@
 		else
 			return false;
 	}
+	
+	function redirect($url){
+		header("location: $url");
+	}
 	connect();
 ?>
