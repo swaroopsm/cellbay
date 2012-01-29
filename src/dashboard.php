@@ -1,6 +1,6 @@
 <?php
-session_start();
-if($_SESSION['loggedin']==true)
+include("includes/functions.php");
+if(checkSession('loggedin')==true)
 {
 ?>
 <!DOCTYPE html>
@@ -138,5 +138,8 @@ $('a.dropdown-toggle').click(function()  {$('li.dropdown').toggleClass('open') }
   </body>
 </html>
 <?php
+}
+else{
+	echo "error!";
 }
 ?>
