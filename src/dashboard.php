@@ -140,6 +140,6 @@ $('a.dropdown-toggle').click(function()  {$('li.dropdown').toggleClass('open') }
 <?php
 }
 else{
-	echo "error!";
+	redirect("index.php");
 }
 ?>
