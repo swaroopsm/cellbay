@@ -76,5 +76,13 @@
 	function redirect($url){
 		header("location: $url");
 	}
+	
+	function logout($sesname,$url){
+		if($_SESSION[$sesname]){
+				unset($_SESSION);
+				session_destroy();
+				redirect($url);
+		}
+	}
 	connect();
 ?>
