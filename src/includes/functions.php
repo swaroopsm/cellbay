@@ -1,4 +1,5 @@
 <?php
+	session_start();
 	include("config.php");
 	
 	function connect(){
@@ -65,5 +66,11 @@
 			return $query1;
 	}
 	
+	function checkSession($sesvar){
+		if(isset($_SESSION[$sesvar]))
+			return true;
+		else
+			return false;
+	}
 	connect();
 ?>
