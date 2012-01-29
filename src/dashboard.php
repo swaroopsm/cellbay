@@ -104,7 +104,7 @@ $('a.dropdown-toggle').click(function()  {$('li.dropdown').toggleClass('open') }
 <li class="dropdown" id="login">
 <a class="dropdown-toggle" id="" href="#">Account</a>
 <ul class="dropdown-menu" style="width: 300px;padding-left: 10px;padding-top: 10px;">
-<li><a href="#">Log Out!</a></li>
+<li><a href="response.php?misc=logout">Log Out!</a></li>
 </ul>
 </li>
 </ul>
