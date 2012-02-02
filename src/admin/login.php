@@ -104,11 +104,46 @@ $("div#msg").slideUp(500);
     
       <!-- Main hero unit for a primary marketing message or call to action -->
       <div class="hero-unit">
+      <h2>Admin Login</h2>
 	<table>
 		<tr>
 			<td>
 		</tr>
 	</table>
+	<form class="form-horizontal" action="" method="POST">
+		<tr>
+<td>Your Login ID:
+<td>&nbsp;
+<td>&nbsp;
+<td>&nbsp;
+<td>&nbsp;
+<td><input name="aname" type="text" placeholder="Your Admin ID to login"/>
+</tr>
+<tr>
+<td><br>
+</tr>
+<tr>
+<td><br>
+</tr>
+<tr>
+<td>Your Password: </td>
+<td>&nbsp;
+<td>&nbsp;
+<td>&nbsp;
+<td><input name="apassword" type="password" placeholder="Your Admin Password	"/>
+</tr>
+<tr>
+<td><br>
+</tr>
+<tr>
+<td><br>
+</tr>
+<tr>
+<td><br>
+</tr>
+<a class="btn danger" id="formClose" href="#">Cancel</a>
+<a class="btn success" id="joinBtn" href="#">Submit</a>
+	</form>
       </div>
 
       <!-- Example row of columns -->
