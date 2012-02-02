@@ -79,8 +79,8 @@
 	
 	function logout($sesname,$url){
 		if($_SESSION[$sesname]){
-				unset($_SESSION);
-				session_destroy();
+				unset($_SESSION[$sesname]);
+				session_destroy($sesname);
 				redirect($url);
 		}
 	}
