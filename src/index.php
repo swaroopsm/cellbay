@@ -167,7 +167,29 @@ $("div#msg").slideUp(500);
       </div>
 
       <footer>
-        <p>&copy CellBay 2012</p>
+     
+       
+    <!--    <div class="container">
+        <div class="row"  style="background-color: #111;">
+  <div class="span5">
+  	<h5 style="color: #999;">Products</h5>
+  	
+  	
+  	
+  </div>
+  <div class="span5">
+  	<h5 style="color: #999;">More</h5>
+  </div>
+  <div class="span5">
+  	<h5 style="color: #999;">About Us</h5>
+  </div>
+</div>
+<div class="row" style="background-color: #000;">
+<br>-->
+<div class="span14">&copy; 2012 CellBay. All Rights Reserved.  Terms & Privacy.</h6></div>
+</div>
+</div>
+
       </footer>
 <div id="modal-from-dom" class="modal hide fade in" style="display: none;border: 8px solid #ccc;">
 <div class="modal-header">
