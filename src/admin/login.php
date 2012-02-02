@@ -141,8 +141,8 @@ $("div#msg").slideUp(500);
 <tr>
 <td><br>
 </tr>
-<a class="btn danger" id="formClose" href="#">Cancel</a>
 <a class="btn success" id="joinBtn" href="#">Submit</a>
+<a class="btn danger" id="formClose" href="#">Reset</a>
 	</form>
       </div>
 
@@ -152,56 +152,6 @@ $("div#msg").slideUp(500);
       <footer>
         <p>&copy CellBay 2012</p>
       </footer>
-<div id="modal-from-dom" class="modal hide fade in" style="display: none;border: 8px solid #ccc;">
-<div class="modal-header">
-<a class="close" href="#">×</a>
-<h3>Sign Up</h3>
-</div>
-<div class="modal-body">
-<center><div  id="loader"></div></center>
-<div id="msg">
-
-</div>
-<tr>
-<td>Your Name:
-<td>&nbsp;
-<td>&nbsp;
-<td>&nbsp;
-<td>&nbsp;
-<td><input id="uname" type="text" placeholder="This will be your Display Name"/>
-</tr>
-<tr>
-<td><br>
-</tr>
-<tr>
-<td><br>
-</tr>
-<tr>
-<td>Your Email: </td>
-<td>&nbsp;
-<td>&nbsp;
-<td>&nbsp;
-<td>&nbsp;
-<td><input id="uemail" type="text" placeholder="This will be username"/>
-</tr>
-<tr>
-<td><br>
-</tr>
-<tr>
-<td><br>
-</tr>
-<tr>
-<td>Your Password: </td>
-<td>&nbsp;
-<td><input id="upassword" type="password" placeholder="This will be used to login"/>
-</tr>
-</div>
-<div class="modal-footer">
-<a class="btn danger" id="formClose" href="#">Cancel</a>
-<a class="btn success" id="joinBtn" href="#">Submit</a>
-</div>
-    
-</div>
     </div> <!-- /container -->
 
   </body>
