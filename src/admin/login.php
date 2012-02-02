@@ -110,7 +110,7 @@ $("div#msg").slideUp(500);
 			<td>
 		</tr>
 	</table>
-	<form class="form-horizontal" action="" method="POST">
+	<form class="form-horizontal" action="response.php?module=login" method="POST">
 		<tr>
 <td>Your Login ID:
 <td>&nbsp;
@@ -141,8 +141,8 @@ $("div#msg").slideUp(500);
 <tr>
 <td><br>
 </tr>
-<a class="btn success" id="joinBtn" href="#">Submit</a>
-<a class="btn danger" id="formClose" href="#">Reset</a>
+<input class="btn success" type=submit value="Submit"/>
+<input class="btn danger" type=reset value="Reset"/>
 	</form>
       </div>
 
