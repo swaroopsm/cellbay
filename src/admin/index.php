@@ -2,6 +2,11 @@
 include("../includes/functions.php");
 if(checkSession('aloggedin')==true)
 {
-echo "Admin Login!";
+?>
+
+<?php
+}
+else{
+redirect("login.php");
 }
 ?>
