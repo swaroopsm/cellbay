@@ -7,12 +7,12 @@ case 'addproduct': ?>
 <form>
 <table>
 <tr>
-<td><label>Product Name: 
-<td><input type="text" id="pName"/>
-</tr>
-<tr>
 <td><label>Product Brand: 
 <td><input type="text" id="pBrand"/>
+</tr>
+<tr>
+<td><label>Product Name: 
+<td><input type="text" id="pName"/>
 </tr>
 <tr>
 <td><label>Product Price: 
@@ -54,10 +54,17 @@ var pBrand=$("#pBrand").val();
 var pPrice=$("#pPrice").val();
 var pYear=$("#pYear").val();
 var pVisible=$("#pVisible").val();
+if(pName=='' || pBrand=='' || pPrice=='' || pYear=='' || pVisible==''){
+$("#msg").html("<div class='alert-message danger'><p><strong>Fill all fields!</strong></p></div>").fadeIn(500);
+}else{
 $.post("response.php?module=addproduct",{pName: pName,pBrand: pBrand,pPrice: pPrice,pYear:pYear,pVisible:pVisible},
 function(data){
-$("div#msg").append("<div class='alert-message success'><p><strong>Product added successfully!</p></div>").hide().fadeIn(500);
+$("div#msg").html("<div class='alert-message success'><p><strong>Product added successfully!</strong></p></div>").hide().fadeIn(500);
+setTimeout(function(){
+$("#msg").fadeOut(500);
+},3000);
 });
+}
 });
 });
 </script>
