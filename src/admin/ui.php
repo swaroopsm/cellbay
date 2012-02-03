@@ -37,7 +37,7 @@ case 'addproduct': ?>
 </tr>
 </table>
 <div style="margin-top: -20px;">
-<input style="margin-left: 40px;" class="btn success" type=submit value="Submit"/>
+<input style="margin-left: 40px;" id="newProduct" type="button" class="btn success" value="Submit"/>
 <input style="margin-left: 10px;" class="btn danger" type=reset value="Reset"/>
 </div>
 </form>
@@ -45,4 +45,15 @@ case 'addproduct': ?>
 }
 }
 ?>
+<script type="text/javascript">
+$(document).ready(function(){
+$("#newProduct").click(function(){
+var pName=$("#pName").val();
+var pBrand=$("#pBrand").val();
+var pPrice=$("#pPrice").val();
+var pYear=$("#pYear").val();
+var pVisible=$("#pVisible").val();
 
+});
+});
+</script>
