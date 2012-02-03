@@ -85,6 +85,10 @@ $("#msg").fadeOut(500);
 });
 }
 });
-
+$(".productDetail").click(function(){
+var id=$(this).attr("href");
+id=id.substring(1);
+alert(id);
+});
 });
 </script>
