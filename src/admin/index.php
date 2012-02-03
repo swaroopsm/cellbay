@@ -91,6 +91,12 @@ $("#ui").load("ui.php?ui=addproduct").hide().fadeIn(500);
 $("#loader").hide();
 return false;
 })
+$("#viewProd").click(function(){
+$("#loader").html("<img src='../images/loader.gif'></img>").hide().show();
+$("#ui").load("ui.php?ui=viewproduct").hide().fadeIn(500);
+$("#loader").hide();
+return false;
+})
 $('a.dropdown-toggle').click(function()  {$('li.dropdown').toggleClass('open') } );
 });
 </script>
