@@ -85,6 +85,10 @@ $("#productsMenu").click(function(){
 $("#productsSub").slideToggle(500);
 return false;
 });
+$("#addProd").click(function(){
+$("#ui").load("ui.php?ui=addproduct").hide().fadeIn(500);
+return false;
+})
 $('a.dropdown-toggle').click(function()  {$('li.dropdown').toggleClass('open') } );
 });
 </script>
@@ -127,7 +131,9 @@ $('a.dropdown-toggle').click(function()  {$('li.dropdown').toggleClass('open') }
         </div>
         <div class="row">
           <div class="span10">
-            <h2>Main content</h2>
+            <div id="ui">
+            
+            </div>
           </div>
           <div class="span4">
             <h3>Secondary content</h3>
