@@ -1,5 +1,6 @@
 <?php
 include("../includes/functions.php");
+include("class.products.php");
 if(isset($_GET['module'])){
 	$module=$_GET['module'];
 	switch($module){
@@ -22,6 +23,12 @@ if(isset($_GET['module'])){
 									
 		case 'logout': logout('aloggedin','login.php');
 									 break;	
+									 
+		case 'addproduct': $fields=array("ProductName","ProductBrand","ProductPrice","ProductYear");
+											 $values=array("$_POST[pName]","$_POST[pBrand]","$_POST[pPrice]","$_POST[pYear]");
+											 $obj=new products();
+											 $obj->insert($fields,$values);
+											 break;
 	}
 }
 ?>
