@@ -37,9 +37,9 @@
                         if(!is_int($key[$x]))  
                         {  
                             if(mysql_num_rows($queryStats) > 1)  
-                                $this->result[$i][$key[$x]] = $r[$key[$x]];  
+                                $result[$i][$key[$x]] = $r[$key[$x]];  
                             else if(mysql_num_rows($queryStats) < 1)  
-                                $this->result = null;  
+                                $result = null;  
                             else  
                                 $result[$key[$x]] = $r[$key[$x]];  
                         }  
