@@ -105,7 +105,7 @@ $('a.dropdown-toggle').click(function()  {$('li.dropdown').toggleClass('open') }
 <li class="dropdown" id="login">
 <a class="dropdown-toggle" id="" href="#">Account</a>
 <ul class="dropdown-menu" style="width: 300px;padding-left: 10px;padding-top: 10px;">
-<li><a href="response.php?misc=logout">Log Out!</a></li>
+<li><a href="response.php?module=logout">Log Out!</a></li>
 </ul>
 </li>
 </ul>
@@ -118,7 +118,7 @@ $('a.dropdown-toggle').click(function()  {$('li.dropdown').toggleClass('open') }
 
       <div class="content">
         <div class="page-header">
-          <h1><?php echo "Welcome ".$_SESSION['uname']."!"; ?></h1>
+          <h1><?php echo "Welcome ".$_SESSION['aname']."!"; ?></h1>
         </div>
         <div class="row">
           <div class="span10">
