@@ -125,6 +125,7 @@ $('a.dropdown-toggle').click(function()  {$('li.dropdown').toggleClass('open') }
           </div>
           <div class="span4">
             <h3>Secondary content</h3>
+            <i class="icon-search">s</i>
           </div>
         </div>
       </div>
