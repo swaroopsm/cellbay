@@ -19,6 +19,9 @@ if(isset($_GET['module'])){
 									else
 										header("location: login.php");
 									break;
+									
+		case 'logout': logout('aloggedin','login.php');
+									 break;	
 	}
 }
 ?>
