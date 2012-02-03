@@ -3,6 +3,7 @@ if(isset($_GET['ui'])){
 $ui=$_GET['ui'];
 switch($ui){
 case 'addproduct': ?>
+<div id="msg"></div>
 <h3>Add Product</h3>
 <form>
 <table>
@@ -41,7 +42,6 @@ case 'addproduct': ?>
 <input style="margin-left: 10px;" class="btn danger" type=reset value="Reset"/>
 </div>
 </form>
-<div id="msg"></div>
 <?php
 }
 }
