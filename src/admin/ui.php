@@ -1,4 +1,5 @@
 <?php
+include("../includes/functions.php");
 if(isset($_GET['ui'])){
 $ui=$_GET['ui'];
 switch($ui){
@@ -43,6 +44,23 @@ case 'addproduct': ?>
 </div>
 </form>
 <?php
+break;
+
+case 'viewproduct': $row=select("products","*");
+										$count=count($row);
+										if($count>1){
+										echo "<div class='row'>";
+										for($i=0;$i<$count;$i++){
+										echo "<div class='span3'>";
+										echo "<h5>".$row[$i]['ProductBrand']." ".$row[$i]['ProductName']."</h5><ul class='media-grid'><li><a class='productDetail' href='#".$row[$i]['ProductID']."'><img class='thumbnail' src='#' width='150' height='120' alt=''></a></li></ul>";
+										echo "</div>";
+										}
+										echo "</div>";
+										}
+?>
+
+<?php
+break;
 }
 }
 ?>
@@ -67,5 +85,6 @@ $("#msg").fadeOut(500);
 });
 }
 });
+
 });
 </script>
