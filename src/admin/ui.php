@@ -41,6 +41,7 @@ case 'addproduct': ?>
 <input style="margin-left: 10px;" class="btn danger" type=reset value="Reset"/>
 </div>
 </form>
+<div id="msg"></div>
 <?php
 }
 }
@@ -53,7 +54,10 @@ var pBrand=$("#pBrand").val();
 var pPrice=$("#pPrice").val();
 var pYear=$("#pYear").val();
 var pVisible=$("#pVisible").val();
-
+$.post("response.php?module=addproduct",{pName: pName,pBrand: pBrand,pPrice: pPrice,pYear:pYear,pVisible:pVisible},
+function(data){
+$("div#msg").append("<div class='alert-message success'><p><strong>Product added successfully!</p></div>").hide().fadeIn(500);
+});
 });
 });
 </script>
