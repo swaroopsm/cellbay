@@ -21,43 +21,12 @@
     </style>
 
     <!-- Le fav and touch icons -->
-    <link rel="shortcut icon" href="images/favicon.ico">
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
-    <link rel="stylesheet" href="../css/flexslider.css" type="text/css">
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png">
+    
     <script src="../js/jquery.min.js"></script>
-   <script src="../js/jquery.flexslider.js"></script>
-   <script src="../js/bootstrap.modal.js"></script>
-<script type="text/javascript" charset="utf-8">
-  $(window).load(function() {
-  
-    $('.flexslider').flexslider();
-$('a.dropdown-toggle').click(function()  {$('li.dropdown').toggleClass('open') } );
-$('#formClose').click(function(){
-$('#modal-from-dom').modal('hide');
-});
-$('#joinBtn').click(function(){
-$("div#loader").append("<img src='images/loader.gif' width='30' height='30'/>");
-var uname=$("#uname").val();
-var uemail=$("#uemail").val();
-var upwd=$("#upassword").val();
-$.post("response.php?class=users&module=signup",{uname: uname, uemail: uemail, upwd: upwd},
-function(data){
-$("div#loader").hide()
-$("div#msg").html("<div class='alert-message success'><p><strong>You have successfully signed up! Login to continue...</p></div>").hide().slideDown(1000);
-});
-
-$("#uname").val('');
-$("#uemail").val('');
-$("#upassword").val('');
-$("div#msg").html();
-setTimeout(function(){
-$("div#msg").slideUp(500);
-},2500);
-});
-  });
-</script>
   </head>
 
   <body>
