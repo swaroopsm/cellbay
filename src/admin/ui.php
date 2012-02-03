@@ -55,6 +55,7 @@ var pPrice=$("#pPrice").val();
 var pYear=$("#pYear").val();
 var pVisible=$("#pVisible").val();
 if(pName=='' || pBrand=='' || pPrice=='' || pYear=='' || pVisible==''){
+$("#msg").hide();
 $("#msg").html("<div class='alert-message danger'><p><strong>Fill all fields!</strong></p></div>").fadeIn(500);
 }else{
 $.post("response.php?module=addproduct",{pName: pName,pBrand: pBrand,pPrice: pPrice,pYear:pYear,pVisible:pVisible},
