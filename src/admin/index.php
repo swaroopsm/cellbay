@@ -80,6 +80,11 @@ if(checkSession('aloggedin')==true)
 <script type="text/javascript" src="../js/jquery.min.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
+$("#productsSub").hide();
+$("#productsMenu").click(function(){
+$("#productsSub").slideToggle(500);
+return false;
+});
 $('a.dropdown-toggle').click(function()  {$('li.dropdown').toggleClass('open') } );
 });
 </script>
@@ -126,7 +131,27 @@ $('a.dropdown-toggle').click(function()  {$('li.dropdown').toggleClass('open') }
           </div>
           <div class="span4">
             <h3>Secondary content</h3>
-            <i class="icon-search">s</i>
+            <table class="table">
+            	<tr>
+            		<td><a href="#" id="home">Home</a>
+            	</tr>
+            	<tr>
+            		<td><a href="#a" id="productsMenu">Products</a>
+            	</tr>
+            	<tr id="productsSub">
+            		<td style="list-style-type: none;">
+            			<li>&raquo; <a href="#" id="addProd">Add Products</a></li>
+            			<li>&nbsp;</li>
+            			<li>&raquo; <a href="#" id="viewProd">View Products</a></li>
+            		</td>
+            	</tr>
+            	<tr>
+            		<td><a href="#a" id="productsMenu">Orders</a>
+            	</tr>
+            	<tr>
+            		<td>
+            	</tr>
+            </table>
           </div>
         </div>
       </div>
