@@ -24,7 +24,12 @@ case 'addproduct': ?>
 </tr>
 <tr>
 <td><label>Product Visibility: 
-<td><input type="text" id="pVisible"/>
+<td>
+<select id="pVisible" style="background-color: #fff;">
+<option value="1" selected="selected">Public</option>
+<option value="0">Private</option>
+</select>
+</td>
 </tr>
 <tr>
 <td>
@@ -40,3 +45,4 @@ case 'addproduct': ?>
 }
 }
 ?>
+
