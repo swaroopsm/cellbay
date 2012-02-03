@@ -86,7 +86,9 @@ $("#productsSub").slideToggle(500);
 return false;
 });
 $("#addProd").click(function(){
+$("#loader").append("<img src='../images/loader.gif'></img>");
 $("#ui").load("ui.php?ui=addproduct").hide().fadeIn(500);
+$("#loader").hide();
 return false;
 })
 $('a.dropdown-toggle').click(function()  {$('li.dropdown').toggleClass('open') } );
@@ -131,6 +133,7 @@ $('a.dropdown-toggle').click(function()  {$('li.dropdown').toggleClass('open') }
         </div>
         <div class="row">
           <div class="span10">
+          <center><div id="loader"></div></center>
             <div id="ui">
             
             </div>
