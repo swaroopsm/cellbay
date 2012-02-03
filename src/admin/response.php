@@ -24,8 +24,8 @@ if(isset($_GET['module'])){
 		case 'logout': logout('aloggedin','login.php');
 									 break;	
 									 
-		case 'addproduct': $fields=array("ProductName","ProductBrand","ProductPrice","ProductYear");
-											 $values=array("$_POST[pName]","$_POST[pBrand]","$_POST[pPrice]","$_POST[pYear]");
+		case 'addproduct': $fields=array("ProductName","ProductBrand","ProductPrice","ProductYear","ProductVisibility");
+											 $values=array("$_POST[pName]","$_POST[pBrand]","$_POST[pPrice]","$_POST[pYear]","$_POST[pVisible]");
 											 $obj=new products();
 											 $obj->insert($fields,$values);
 											 break;
