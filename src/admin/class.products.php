@@ -42,7 +42,7 @@ if(!is_array($fields) || !is_array($values))
 
 public function view($id){
 $sql=mysql_query("SELECT * FROM products WHERE ProductID=$id");
-$row=mysql_fetch_assoc($sql)
+$row=mysql_fetch_assoc($sql);
 $this->name=$row['ProductName'];
 $this->brand=$row['ProductBrand'];
 $this->price=$row['ProductPrice'];
