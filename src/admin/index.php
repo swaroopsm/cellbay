@@ -83,7 +83,7 @@ if(checkSession('aloggedin')==true)
 <script type="text/javascript" src="../js/facebox.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
-
+$("#loader").hide();
 $("#productsSub").hide();
 $("#productsMenu").click(function(){
 $("#productsSub").slideToggle(500);
@@ -96,9 +96,9 @@ $("#loader").hide();
 return false;
 })
 $("#viewProd").click(function(){
-$("#loader").html("<img src='../images/loader.gif'></img>").hide().show();
+$("#loader").show();
 $("#ui").load("ui.php?ui=viewproduct").hide().fadeIn(500);
-$("#loader").hide();
+$("#loader").hide(100);
 return false;
 })
 $('a.dropdown-toggle').click(function()  {$('li.dropdown').toggleClass('open') } );
@@ -143,7 +143,7 @@ $('a.dropdown-toggle').click(function()  {$('li.dropdown').toggleClass('open') }
         </div>
         <div class="row">
           <div class="span10">
-          <center><div id="loader"></div></center>
+          <center><div id="loader"><img src='../images/loader.gif'/></div></center>
             <div id="ui">
             
             </div>
