@@ -52,7 +52,14 @@ case 'viewproduct': $row=select("products","*");
 										echo "<div class='row'>";
 										for($i=0;$i<$count;$i++){
 										echo "<div class='span3'>";
-										echo "<h5>".$row[$i]['ProductBrand']." ".$row[$i]['ProductName']."</h5><ul class='media-grid'><li><a class='productDetail' rel='facebox' href='viewproduct.php?productID=".$row[$i]['ProductID']."'><img class='thumbnail' src='#' width='150' height='120' alt=''></a></li></ul>";
+										echo "<h5>".$row[$i]['ProductBrand']." ".$row[$i]['ProductName']."</h5><ul class='media-grid'><li>";
+if($row[$i]['ProductImage']==''){
+echo "<a rel='facebox' href='addimage.php'><img class='thumbnail' src='' width='140' height='40' alt=''>Add Image</a>";
+}
+else{
+echo "<a class='productDetail' rel='facebox' href='viewproduct.php?productID=".$row[$i]['ProductID']."'><img class='thumbnail' src='#' width='150' height='120' alt=''></a>";
+}
+echo "</li></ul>";
 										echo "</div>";
 										}
 										echo "</div>";
@@ -87,7 +94,7 @@ function(data){
 $("div#msg").html("<div class='alert-message success'><p><strong>Product added successfully!</strong></p></div>").hide().fadeIn(500);
 setTimeout(function(){
 $("#msg").fadeOut(500);
-},3000);
+},2000);
 });
 }
 });
