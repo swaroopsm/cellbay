@@ -6,4 +6,5 @@ $host="";  //Your host/server name Eg.: localhost
 $user=""; //Your server username Eg.: root
 $pwd=""; //Your server password Eg.: ******
 $db=""; //Your database name
+$uploads=""; //Product Images uploads folder
 ?>
