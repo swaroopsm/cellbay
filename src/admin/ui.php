@@ -54,7 +54,7 @@ case 'viewproduct': $row=select("products","*");
 										echo "<div class='span3'>";
 										echo "<h5>".$row[$i]['ProductBrand']." ".$row[$i]['ProductName']."</h5><ul class='media-grid'><li>";
 if($row[$i]['ProductImage']==''){
-echo "<a rel='facebox' href='addimage.php'><img class='thumbnail' src='' width='140' height='40' alt=''>Add Image</a>";
+echo "<a rel='facebox' href='addimage.php?productID=".$row[$i]['ProductID']."'><img class='thumbnail' src='' width='140' height='40' alt=''>Add Image</a>";
 }
 else{
 echo "<a class='productDetail' rel='facebox' href='viewproduct.php?productID=".$row[$i]['ProductID']."'><img class='thumbnail' src='#' width='150' height='120' alt=''></a>";
