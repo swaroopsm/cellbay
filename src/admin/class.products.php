@@ -1,7 +1,7 @@
 <?php
 class products{
 
-private $name,$brand,$price,$visible,$year;
+private $name,$brand,$price,$visible,$year,$image;
 
 public function getName(){
 return $this->name;
@@ -21,6 +21,10 @@ return $this->visible;
 
 public function getYear(){
 return $this->year;
+}
+
+public function getImage(){
+return $this->image;
 }
 
 public function insert($fields,$values){
