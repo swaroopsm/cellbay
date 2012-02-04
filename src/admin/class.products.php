@@ -52,6 +52,7 @@ $this->brand=$row['ProductBrand'];
 $this->price=$row['ProductPrice'];
 $this->visible=$row['ProductVisibility'];
 $this->year=$row['ProductYear'];
+$this->image=$row['ProductImage'];
 }
 }
 ?>
