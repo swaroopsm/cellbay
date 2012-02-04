@@ -52,20 +52,26 @@ case 'viewproduct': $row=select("products","*");
 										echo "<div class='row'>";
 										for($i=0;$i<$count;$i++){
 										echo "<div class='span3'>";
-										echo "<h5>".$row[$i]['ProductBrand']." ".$row[$i]['ProductName']."</h5><ul class='media-grid'><li><a class='productDetail' href='#".$row[$i]['ProductID']."'><img class='thumbnail' src='#' width='150' height='120' alt=''></a></li></ul>";
+										echo "<h5>".$row[$i]['ProductBrand']." ".$row[$i]['ProductName']."</h5><ul class='media-grid'><li><a class='productDetail' rel='facebox' href='viewproduct.php?productID=".$row[$i]['ProductID']."'><img class='thumbnail' src='#' width='150' height='120' alt=''></a></li></ul>";
 										echo "</div>";
 										}
 										echo "</div>";
 										}
 ?>
+<div id="modal-from-dom1" class="modal hide fade in" style="display: none;border: 8px solid #ccc;">
+<?php
 
+?>
+</div>
 <?php
 break;
 }
 }
 ?>
+
 <script type="text/javascript">
 $(document).ready(function(){
+  $('a[rel*=facebox]').facebox() ;
 $("#newProduct").click(function(){
 var pName=$("#pName").val();
 var pBrand=$("#pBrand").val();
@@ -84,11 +90,6 @@ $("#msg").fadeOut(500);
 },3000);
 });
 }
-});
-$(".productDetail").click(function(){
-var id=$(this).attr("href");
-id=id.substring(1);
-alert(id);
 });
 });
 </script>

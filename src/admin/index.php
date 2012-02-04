@@ -19,6 +19,7 @@ if(checkSession('aloggedin')==true)
 
     <!-- Le styles -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/facebox.css" rel="stylesheet" media="screen" type="text/css"/>
     <style type="text/css">
       /* Override some defaults */
       html, body {
@@ -79,8 +80,10 @@ if(checkSession('aloggedin')==true)
     <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png">
 <script type="text/javascript" src="../js/jquery.min.js"></script>
 <script src="../js/bootstrap.modal.js"></script>
+<script type="text/javascript" src="../js/facebox.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
+
 $("#productsSub").hide();
 $("#productsMenu").click(function(){
 $("#productsSub").slideToggle(500);

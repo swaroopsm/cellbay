@@ -29,9 +29,7 @@ if(isset($_GET['module'])){
 											 $obj=new products();
 											 $obj->insert($fields,$values);
 											 break;
-											 
-		case 'viewproduct': 
-												break;
+				
 	}
 }
 ?>
