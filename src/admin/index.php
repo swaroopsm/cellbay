@@ -78,6 +78,7 @@ if(checkSession('aloggedin')==true)
     <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png">
 <script type="text/javascript" src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.modal.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
 $("#productsSub").hide();
