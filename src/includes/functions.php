@@ -83,5 +83,37 @@
 				redirect($url);
 		}
 	}
+	
+	function update($tbl,$fields,$values,$where=null){
+                            if(!is_array($fields) || !is_array($values))
+            return 'Error - Fields and values must be sent as an array';
+                        
+        $field_ct  = count($fields);
+        $value_ct = count($values);
+        if($field_ct != $value_ct)
+            return 'Error - Field count and value count do not match.';
+                        $query1 = "Update `$tbl` SET ";
+                        $keys = array_keys($fields); 
+                        for($i = 0; $i < count($fields); $i++)  
+           {  
+                if(is_string($fields[$keys[$i]]))  
+                {  
+                    $query1 .= $fields[$i].'="'.$values[$keys[$i]].'"';  
+                }  
+                else  
+                {  
+                    $query1 .= $fields[$i].'='.$values[$keys[$i]];  
+                }  
+  
+                // Parse to add commas  
+                if($i != count($fields)-1)  
+                {  
+                    $query1 .= ', ';  
+                }  
+            }  
+        $query1 .= " WHERE $where";
+                $exec=query($query1);
+        return $exec;
+                }
 	connect();
 ?>
