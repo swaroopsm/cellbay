@@ -90,7 +90,7 @@ $("#productsSub").slideToggle(500);
 return false;
 });
 $("#addProd").click(function(){
-$("#loader").append("<img src='../images/loader.gif'></img>");
+$("#loader").html("<img src='../images/loading.gif'></img>");
 $("#ui").load("ui.php?ui=addproduct").hide().fadeIn(500);
 $("#loader").hide();
 return false;
