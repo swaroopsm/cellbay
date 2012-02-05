@@ -135,7 +135,8 @@ $("div#msg").slideUp(500);
       <!-- Example row of columns -->
       <div class="row">
         <?php
-		$row=select("products","*",null,null,3);
+    $order="ProductID DESC";
+		$row=select("products","*",null,$order,3);
 		$count = count($row);
 		for($i=0;$i<$count;$i++){
 		
