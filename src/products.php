@@ -183,6 +183,39 @@ $("div#msg").slideUp(500);
     </ul>
     
         </div>
+        <div class='span-one-third'>
+          <h2></h2>
+              <ul class='media-grid'>
+    <li>
+    <a href='#'>
+   <img class='thumbnail' src='images/htc.jpg' width='250' height='120' alt=''>
+    </a>
+    </li>
+    </ul>
+    
+        </div>
+        <div class='span-one-third'>
+          <h2></h2>
+              <ul class='media-grid'>
+    <li>
+    <a href='#'>
+   <img class='thumbnail' src='images/blackberry.jpg' width='250' height='120' alt=''>
+    </a>
+    </li>
+    </ul>
+    
+        </div>
+        <div class='span-one-third'>
+          <h2></h2>
+              <ul class='media-grid'>
+    <li>
+    <a href='#'>
+   <img class='thumbnail' src='images/micromax.jpg' width='250' height='120' alt=''>
+    </a>
+    </li>
+    </ul>
+    
+        </div>
       </div>
 
       <footer>
