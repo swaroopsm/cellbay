@@ -116,9 +116,7 @@ $('a.dropdown-toggle').click(function()  {$('li.dropdown').toggleClass('open') }
 
            
             <li class="active"><a href="#">Home</a></li>
-
-            <li><a href="about.php">Products</a></li>
-            <li><a href="#contact">Help</a></li>
+            <li><a href="#help">Help</a></li>
 
           </ul>
 
