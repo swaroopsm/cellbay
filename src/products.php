@@ -72,8 +72,8 @@ $("div#msg").slideUp(500);
           <a class="brand" href="index.php">CellBay</a>
           <ul class="nav">
 
-            <li class="active"><a href="index.php">Home</a></li>
-				<li><a href="products.php">Products</a></li>
+            <li><a href="index.php">Home</a></li>
+				<li class="active"><a href="products.php">Products</a></li>
            
 
             <li><a href="about.php">About</a></li>
@@ -115,7 +115,6 @@ $("div#msg").slideUp(500);
       <div class="hero-unit">
 
         <div class="flexslider" style="">
-	
   <ul class="slides">
     <li>
       <img src="images/header2.jpg" height="340" alt="text1"/>
@@ -135,39 +134,8 @@ $("div#msg").slideUp(500);
 
       <!-- Example row of columns -->
       <div class="row">
-        <div class="span-one-third">
-          <h2>Samsung Galaxy S2</h2>
-              <ul class="media-grid">
-    <li>
-    <a href="#">
-   <img class="thumbnail" src="images/model1.jpg" width="250" height="180" alt="">
-    </a>
-    </li>
-    </ul>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
-        </div>
-        <div class="span-one-third">
-          <h2>iPhone 4S</h2>
-               <ul class="media-grid">
-    <li>
-    <a href="#">
-    <img class="thumbnail" src="images/model2.jpg" width="250" height="180" alt="">
-    </a>
-    </li>
-    </ul>
- <p><a class="btn" href="#">View details &raquo;</a></p>
-       </div>
-        <div class="span-one-third">
-          <h2>hTc Wildfire</h2>
-             <ul class="media-grid">
-    <li>
-    <a href="#">
-    <img class="thumbnail" src="images/model3.jpg" width="250" height="180" alt="">
-    </a>
-    </li>
-    </ul>
- <p><a class="btn" href="#">View details &raquo;</a></p>
-        </div>
+      
+        
       </div>
 
       <footer>
