@@ -112,27 +112,7 @@ $("div#msg").slideUp(500);
 	    </li>
 </ul>
       <!-- Main hero unit for a primary marketing message or call to action -->
-      <div class="hero-unit">
-
-        <div class="flexslider" style="">
-  <ul class="slides">
-    <li>
-      <img src="images/header2.jpg" height="340" alt="text1"/>
-    </li>
-    <li>
-      <img src="images/header1.jpg" height="340" alt="text2"/>
-    </li>
-    <li>
-      <img src="images/header3.jpg" height="340" alt="text3"/>
-    </li>
-    <li>
-      <img src="images/header4.jpg" height="340" alt="text3"/>
-    </li>
-  </ul>
-</div>
-      </div>
-
-      <!-- Example row of columns -->
+     <!-- Example row of columns -->
       <h3>Popular Brands</h3>
       <div class="row">
      
