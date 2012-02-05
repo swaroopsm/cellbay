@@ -150,6 +150,39 @@ $("div#msg").slideUp(500);
     </ul>
     
         </div>
+        <div class='span-one-third'>
+          <h2></h2>
+              <ul class='media-grid'>
+    <li>
+    <a href='#'>
+   <img class='thumbnail' src='images/sonyericsson.jpg' width='250' height='150' alt=''>
+    </a>
+    </li>
+    </ul>
+    
+        </div>
+        <div class='span-one-third'>
+          <h2></h2>
+              <ul class='media-grid'>
+    <li>
+    <a href='#'>
+   <img class='thumbnail' src='images/nokia.bmp' width='250' height='150' alt=''>
+    </a>
+    </li>
+    </ul>
+    
+        </div>
+        <div class='span-one-third'>
+          <h2></h2>
+              <ul class='media-grid'>
+    <li>
+    <a href='#'>
+   <img class='thumbnail' src='images/motorola.jpg' width='250' height='150' alt=''>
+    </a>
+    </li>
+    </ul>
+    
+        </div>
       </div>
 
       <footer>
