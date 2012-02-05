@@ -133,9 +133,20 @@ $("div#msg").slideUp(500);
       </div>
 
       <!-- Example row of columns -->
+      <h3>Popular Brands</h3>
       <div class="row">
-      
-        
+     
+       <div class='span-one-third'>
+          <h2></h2>
+              <ul class='media-grid'>
+    <li>
+    <a href='#'>
+   <img class='thumbnail' src='images/samsung.jpg' width='200' height='150' alt=''>
+    </a>
+    </li>
+    </ul>
+          <p><a class='btn' href='#'>View details &raquo;</a></p>
+        </div> 
       </div>
 
       <footer>
