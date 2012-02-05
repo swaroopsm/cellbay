@@ -37,7 +37,10 @@ include("admin/class.products.php")
   $(window).load(function() {
   
     $('.flexslider').flexslider();
-    
+    $(".thumbnail").click(function(){
+var brand=$(this).attr("alt");
+
+});
 $('a.dropdown-toggle').click(function()  {$('li.dropdown').toggleClass('open') } );
 $('#formClose').click(function(){
 $('#modal-from-dom').modal('hide');
