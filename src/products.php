@@ -37,6 +37,7 @@ include("admin/class.products.php")
   $(window).load(function() {
   
     $('.flexslider').flexslider();
+    
 $('a.dropdown-toggle').click(function()  {$('li.dropdown').toggleClass('open') } );
 $('#formClose').click(function(){
 $('#modal-from-dom').modal('hide');
@@ -60,7 +61,7 @@ setTimeout(function(){
 $("div#msg").slideUp(500);
 },2500);
 });
-  });
+});
 </script>
   </head>
 
@@ -121,7 +122,7 @@ $("div#msg").slideUp(500);
               <ul class='media-grid'>
     <li>
     <a href='#'>
-   <img class='thumbnail' src='images/samsung.jpg' width='250' height='120' alt=''>
+   <img class='thumbnail' src='images/samsung.jpg' width='250' height='120' alt='Samsung'>
     </a>
     </li>
     </ul>
@@ -133,7 +134,7 @@ $("div#msg").slideUp(500);
               <ul class='media-grid'>
     <li>
     <a href='#'>
-   <img class='thumbnail' src='images/lg.jpg' width='250' height='120' alt=''>
+   <img class='thumbnail' src='images/lg.jpg' width='250' height='120' alt='LG'>
     </a>
     </li>
     </ul>
@@ -144,7 +145,7 @@ $("div#msg").slideUp(500);
               <ul class='media-grid'>
     <li>
     <a href='#'>
-   <img class='thumbnail' src='images/karbonn.jpg' width='250' height='120' alt=''>
+   <img class='thumbnail' src='images/karbonn.jpg' width='250' height='120' alt='Karbonn'>
     </a>
     </li>
     </ul>
@@ -155,7 +156,7 @@ $("div#msg").slideUp(500);
               <ul class='media-grid'>
     <li>
     <a href='#'>
-   <img class='thumbnail' src='images/sonyericsson.jpg' width='250' height='150' alt=''>
+   <img class='thumbnail' src='images/sonyericsson.jpg' width='250' height='150' alt='Sony Ericsson'>
     </a>
     </li>
     </ul>
@@ -166,7 +167,7 @@ $("div#msg").slideUp(500);
               <ul class='media-grid'>
     <li>
     <a href='#'>
-   <img class='thumbnail' src='images/nokia.bmp' width='250' height='150' alt=''>
+   <img class='thumbnail' src='images/nokia.bmp' width='250' height='150' alt='Nokia'>
     </a>
     </li>
     </ul>
@@ -177,7 +178,7 @@ $("div#msg").slideUp(500);
               <ul class='media-grid'>
     <li>
     <a href='#'>
-   <img class='thumbnail' src='images/motorola.jpg' width='250' height='150' alt=''>
+   <img class='thumbnail' src='images/motorola.jpg' width='250' height='150' alt='Motorola'>
     </a>
     </li>
     </ul>
@@ -188,7 +189,7 @@ $("div#msg").slideUp(500);
               <ul class='media-grid'>
     <li>
     <a href='#'>
-   <img class='thumbnail' src='images/htc.jpg' width='250' height='120' alt=''>
+   <img class='thumbnail' src='images/htc.jpg' width='250' height='120' alt='HTC'>
     </a>
     </li>
     </ul>
@@ -199,7 +200,7 @@ $("div#msg").slideUp(500);
               <ul class='media-grid'>
     <li>
     <a href='#'>
-   <img class='thumbnail' src='images/blackberry.jpg' width='250' height='120' alt=''>
+   <img class='thumbnail' src='images/blackberry.jpg' width='250' height='120' alt='Blackberry'>
     </a>
     </li>
     </ul>
@@ -210,7 +211,7 @@ $("div#msg").slideUp(500);
               <ul class='media-grid'>
     <li>
     <a href='#'>
-   <img class='thumbnail' src='images/micromax.jpg' width='250' height='120' alt=''>
+   <img class='thumbnail' src='images/micromax.jpg' width='250' height='120' alt='Micromax'>
     </a>
     </li>
     </ul>
@@ -221,7 +222,7 @@ $("div#msg").slideUp(500);
               <ul class='media-grid'>
     <li>
     <a href='#'>
-   <img class='thumbnail' src='images/apple.jpg' width='250' height='120' alt=''>
+   <img class='thumbnail' src='images/apple.jpg' width='250' height='120' alt='Apple'>
     </a>
     </li>
     </ul>
