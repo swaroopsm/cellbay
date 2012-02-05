@@ -37,11 +37,11 @@
           <a class="brand" href="index.php">CellBay</a>
           <ul class="nav">
 
-            <li class="active"><a href="index.php">Home</a></li>
-				<li><a href="products.php">Products</a></li>
+            <li class="active"><a href="../">Home</a></li>
+				<li><a href="../products.php">Products</a></li>
            
 
-            <li><a href="about.php">About</a></li>
+            <li><a href="../about.php">About</a></li>
             <li><a href="#contact">Contact</a></li>
 	    
           </ul>
