@@ -40,7 +40,10 @@ include("admin/class.products.php")
     $(".thumbnail").click(function(){
 var brand=$(this).attr("alt");
 $("#popBrands").html(brand+" Mobile Phones").hide().fadeIn(500);
-$("#mobilePhone").hide(500);
+$.post("ui.php?module=getPhoneBrand", {brand: brand},
+function(data){
+$("#mobilePhone").html(data).hide().fadeIn(500);
+});
 });
 $('a.dropdown-toggle').click(function()  {$('li.dropdown').toggleClass('open') } );
 $('#formClose').click(function(){
