@@ -138,6 +138,7 @@ $("div#msg").slideUp(500);
     $order="ProductID DESC";
 		$row=select("products","*",null,$order,3);
 		$count = count($row);
+		$uploads=substr($uploads,3);
 		for($i=0;$i<$count;$i++){
 		
 		echo "<div class='span-one-third'>
@@ -145,7 +146,7 @@ $("div#msg").slideUp(500);
               <ul class='media-grid'>
     <li>
     <a href='#'>
-   <img class='thumbnail' src='uploads/".$row[$i]['ProductImage']."' width='250' height='180' alt=''>
+   <img class='thumbnail' src='$uploads/".$row[$i]['ProductImage']."' width='250' height='180' alt='$uploads'>
     </a>
     </li>
     </ul>
