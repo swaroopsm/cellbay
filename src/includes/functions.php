@@ -12,17 +12,19 @@
 		return mysql_query($sql);
 	}
 	
-	function select($table, $rows = '*', $where = null, $order = null)  
+	function select($table, $rows = '*', $where = null, $order = null,$limit=null)  
         { 
             $query1 = 'SELECT '.$rows.' FROM '.$table;  
             if($where != null)  
                 $query1 .= ' WHERE '.$where;  
             if($order != null)  
                 $query1 .= ' ORDER BY '.$order;  
+            if($limit != null)
+            	$query1.=' LIMIT '.$limit;
 			
            // if($this->tableExists($table))  
           // {  
-			//echo $query1;
+			return $query1;
             $queryStats = dbquery($query1);  
             if($queryStats)  
             {  
