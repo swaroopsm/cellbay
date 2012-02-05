@@ -39,7 +39,7 @@ include("admin/class.products.php")
     $('.flexslider').flexslider();
     $(".thumbnail").click(function(){
 var brand=$(this).attr("alt");
-$("#popBrands").html(brand+" Mobile Phones").hide().fadeIn(500);
+$("#popBrands").html("<u>"+brand+" Mobile Phones</u>").hide().fadeIn(500);
 $.post("ui.php?module=getPhoneBrand", {brand: brand},
 function(data){
 $("#mobilePhone").html(data).hide().fadeIn(500);
