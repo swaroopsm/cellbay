@@ -10,7 +10,21 @@ case 'addproduct': ?>
 <table>
 <tr>
 <td><label>Product Brand: 
-<td><input type="text" id="pBrand"/>
+<td>
+<select id="pBrand" style='background-color: #fff;'>
+<option value="" selected="selected">-Select Brand-</option>
+<option value="Samsung">Samsung</option>
+<option value="Nokia">Nokia</option>
+<option value="LG">LG</option>
+<option value="Sony Ericsson">SonyEricsson</option>
+<option value="Motorola">Motorola</option>
+<option value="HTC">Htc</option>
+<option value="Blackberry">Blackberry</option>
+<option value="Apple">Apple</option>
+<option value="Micromax">Micromax</option>
+<option value="Karbonn">Karbonn</option>
+</select>
+</td>
 </tr>
 <tr>
 <td><label>Product Name: 
