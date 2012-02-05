@@ -1,3 +1,6 @@
+<?php
+include("includes/functions.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -131,39 +134,25 @@ $("div#msg").slideUp(500);
 
       <!-- Example row of columns -->
       <div class="row">
-        <div class="span-one-third">
-          <h2>Samsung Galaxy S2</h2>
-              <ul class="media-grid">
+        <?php
+		$row=select("products","*",null,null,3);
+		$count = count($row);
+		for($i=0;$i<$count;$i++){
+		
+		echo "<div class='span-one-third'>
+          <h2>".$row[$i]['ProductBrand']." ".$row[$i]['ProductName']."</h2>
+              <ul class='media-grid'>
     <li>
-    <a href="#">
-   <img class="thumbnail" src="images/model1.jpg" width="250" height="180" alt="">
+    <a href='#'>
+   <img class='thumbnail' src='uploads/".$row[$i]['ProductImage']."' width='250' height='180' alt=''>
     </a>
     </li>
     </ul>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
-        </div>
-        <div class="span-one-third">
-          <h2>iPhone 4S</h2>
-               <ul class="media-grid">
-    <li>
-    <a href="#">
-    <img class="thumbnail" src="images/model2.jpg" width="250" height="180" alt="">
-    </a>
-    </li>
-    </ul>
- <p><a class="btn" href="#">View details &raquo;</a></p>
-       </div>
-        <div class="span-one-third">
-          <h2>hTc Wildfire</h2>
-             <ul class="media-grid">
-    <li>
-    <a href="#">
-    <img class="thumbnail" src="images/model3.jpg" width="250" height="180" alt="">
-    </a>
-    </li>
-    </ul>
- <p><a class="btn" href="#">View details &raquo;</a></p>
-        </div>
+          <p><a class='btn' href='#'>View details &raquo;</a></p>
+        </div>";
+		
+		 }
+	?>
       </div>
 
       <footer>
