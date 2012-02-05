@@ -24,7 +24,7 @@
 			
            // if($this->tableExists($table))  
           // {  
-			return $query1;
+			//return $query1;
             $queryStats = dbquery($query1);  
             if($queryStats)  
             {  
