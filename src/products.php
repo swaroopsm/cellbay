@@ -125,7 +125,7 @@ $("div#msg").slideUp(500);
     </a>
     </li>
     </ul>
-          <p><a class='btn' href='#'>View details &raquo;</a></p>
+    
         </div>
         
         <div class='span-one-third'>
@@ -137,7 +137,7 @@ $("div#msg").slideUp(500);
     </a>
     </li>
     </ul>
-          <p><a class='btn' href='#'>View details &raquo;</a></p>
+    
         </div> 
         <div class='span-one-third'>
           <h2></h2>
@@ -148,7 +148,7 @@ $("div#msg").slideUp(500);
     </a>
     </li>
     </ul>
-          <p><a class='btn' href='#'>View details &raquo;</a></p>
+    
         </div>
       </div>
 
