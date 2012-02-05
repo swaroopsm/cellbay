@@ -18,7 +18,7 @@ case 'addproduct': ?>
 <option value="LG">LG</option>
 <option value="Sony Ericsson">Sony Ericsson</option>
 <option value="Motorola">Motorola</option>
-<option value="HTC">Htc</option>
+<option value="HTC">HTC</option>
 <option value="Blackberry">Blackberry</option>
 <option value="Apple">Apple</option>
 <option value="Micromax">Micromax</option>
