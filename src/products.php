@@ -121,7 +121,19 @@ $("div#msg").slideUp(500);
               <ul class='media-grid'>
     <li>
     <a href='#'>
-   <img class='thumbnail' src='images/samsung.jpg' width='200' height='150' alt=''>
+   <img class='thumbnail' src='images/samsung.jpg' width='250' height='150' alt=''>
+    </a>
+    </li>
+    </ul>
+          <p><a class='btn' href='#'>View details &raquo;</a></p>
+        </div>
+        
+        <div class='span-one-third'>
+          <h2></h2>
+              <ul class='media-grid'>
+    <li>
+    <a href='#'>
+   <img class='thumbnail' src='images/nokia.bmp' width='250' height='150' alt=''>
     </a>
     </li>
     </ul>
