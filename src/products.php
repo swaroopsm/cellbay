@@ -39,7 +39,7 @@ include("admin/class.products.php")
     $('.flexslider').flexslider();
     $(".thumbnail").click(function(){
 var brand=$(this).attr("alt");
-
+$("#popBrands").html(brand+" Mobile Phones").hide().fadeIn(500);
 });
 $('a.dropdown-toggle').click(function()  {$('li.dropdown').toggleClass('open') } );
 $('#formClose').click(function(){
@@ -117,7 +117,7 @@ $("div#msg").slideUp(500);
 </ul>
       <!-- Main hero unit for a primary marketing message or call to action -->
      <!-- Example row of columns -->
-      <h3>Popular Brands</h3><br>
+      <h3 id='popBrands'>Popular Brands</h3><br>
       <div class="row">
      
        <div class='span-one-third'>
