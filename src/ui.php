@@ -53,6 +53,6 @@ break;
 <script type="text/javascript">
 $(".thumbnail").click(function(){
 var pid=$(this).attr("alt");
-alert(pid);
+
 });
 </script>
