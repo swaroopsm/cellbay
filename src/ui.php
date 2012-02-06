@@ -15,7 +15,7 @@ case 'getPhoneBrand': $brand=$_POST['brand'];
              						 <ul class='media-grid'>
 										    <li>
 									    <a href='#'>
-										   <img class='thumbnail' src='".substr($uploads,3)."/".$row[$i]['ProductImage']."' width='250' height='250' alt='Samsung'>
+										   <img class='thumbnail' src='".substr($uploads,3)."/".$row[$i]['ProductImage']."' width='250' height='250' alt='".$row[$i]['ProductID']."'>
 								    </a>
 									    </li>
 							    </ul>
@@ -29,7 +29,7 @@ case 'getPhoneBrand': $brand=$_POST['brand'];
              						 <ul class='media-grid'>
 										    <li>
 									    <a href='#'>
-										   <img class='thumbnail' src='".substr($uploads,3)."/".$row['ProductImage']."' width='250' height='120' alt='Samsung'>
+										   <img class='thumbnail' alt='".$row['ProductID']."' src='".substr($uploads,3)."/".$row['ProductImage']."' width='250' height='120' alt='".$row['ProductID']."'>
 								    </a>
 									    </li>
 							    </ul>
@@ -50,3 +50,9 @@ break;
 }
 }
 ?>
+<script type="text/javascript">
+$(".thumbnail").click(function(){
+var pid=$(this).attr("alt");
+alert(pid);
+});
+</script>
