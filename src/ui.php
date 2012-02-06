@@ -28,8 +28,8 @@ case 'getPhoneBrand': $brand=$_POST['brand'];
 												<h2>".$row['ProductName']."</h2>
              						 <ul class='media-grid'>
 										    <li>
-									    <a href='#'>
-										   <img class='thumbnail' alt='".$row['ProductID']."' src='".substr($uploads,3)."/".$row['ProductImage']."' width='250' height='120' alt='".$row['ProductID']."'>
+									    <a href='subui.php' rel='facebox'>
+										   <img class='thumbnail' alt='".$row['ProductID']."' src='".substr($uploads,3)."/".$row['ProductImage']."' width='250' ' height='120' alt='".$row['ProductID']."'>
 								    </a>
 									    </li>
 							    </ul>
@@ -47,12 +47,19 @@ case 'getPhoneBrand': $brand=$_POST['brand'];
 
 <?php
 break;
+
+case 'test':
+echo "Hello :)";
+break;
 }
 }
 ?>
+<div id="modal-from-dom2"  class="modal hide fade in" style="display: none;border: 8px solid #ccc;">
+
+</div>
 <script type="text/javascript">
+$('a[rel*=facebox]').facebox() ;
 $(".thumbnail").click(function(){
 var pid=$(this).attr("alt");
-
 });
 </script>
