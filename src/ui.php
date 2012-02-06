@@ -14,7 +14,7 @@ case 'getPhoneBrand': $brand=$_POST['brand'];
 												<h2>".$row[$i]['ProductName']."</h2>
              						 <ul class='media-grid'>
 										    <li>
-									    <a href='#'>
+									    <a href='subui.php?module=myphone' rel='facebox'>
 										   <img class='thumbnail' src='".substr($uploads,3)."/".$row[$i]['ProductImage']."' width='250' height='250' alt='".$row[$i]['ProductID']."'>
 								    </a>
 									    </li>
@@ -28,7 +28,7 @@ case 'getPhoneBrand': $brand=$_POST['brand'];
 												<h2>".$row['ProductName']."</h2>
              						 <ul class='media-grid'>
 										    <li>
-									    <a href='subui.php' rel='facebox'>
+									    <a href='subui.php?module=myphone' rel='facebox'>
 										   <img class='thumbnail' alt='".$row['ProductID']."' src='".substr($uploads,3)."/".$row['ProductImage']."' width='250' ' height='120' alt='".$row['ProductID']."'>
 								    </a>
 									    </li>
