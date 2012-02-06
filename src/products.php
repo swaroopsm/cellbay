@@ -40,6 +40,7 @@ include("admin/class.products.php")
     $(".thumbnail").click(function(){
 var brand=$(this).attr("alt");
 $("#popBrands").html("<u>"+brand+" Mobile Phones</u>").hide().fadeIn(500);
+$("#mobilePhone").html("<center><img src='images/loading.gif'/></center>").hide().show();
 $.post("ui.php?module=getPhoneBrand", {brand: brand},
 function(data){
 $("#mobilePhone").html(data).hide().fadeIn(500);
