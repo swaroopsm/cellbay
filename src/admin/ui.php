@@ -31,6 +31,12 @@ case 'addproduct': ?>
 <td><input type="text" id="pName"/>
 </tr>
 <tr>
+<td><label>Product Description: 
+<td>
+	<textarea rows="6" cols="40" id="pDesc" placeholder="Separate by a semicolon"></textarea>
+</td>
+</tr>
+<tr>
 <td><label>Product Price: 
 <td><input type="text" id="pPrice"/>
 </tr>
@@ -99,11 +105,12 @@ var pBrand=$("#pBrand").val();
 var pPrice=$("#pPrice").val();
 var pYear=$("#pYear").val();
 var pVisible=$("#pVisible").val();
-if(pName=='' || pBrand=='' || pPrice=='' || pYear=='' || pVisible==''){
+var pDesc=$("#pDesc").val();
+if(pName=='' || pBrand=='' || pPrice=='' || pYear=='' || pVisible=='' || pDesc==''){
 $("#msg").hide();
 $("#msg").html("<div class='alert-message danger'><p><strong>Fill all fields!</strong></p></div>").fadeIn(500);
 }else{
-$.post("response.php?module=addproduct",{pName: pName,pBrand: pBrand,pPrice: pPrice,pYear:pYear,pVisible:pVisible},
+$.post("response.php?module=addproduct",{pName: pName,pBrand: pBrand,pPrice: pPrice,pYear:pYear,pVisible:pVisible, pDesc: pDesc},
 function(data){
 $("div#msg").html("<div class='alert-message success'><p><strong>Product added successfully!</strong></p></div>").hide().fadeIn(500);
 setTimeout(function(){
