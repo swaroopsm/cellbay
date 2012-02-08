@@ -71,7 +71,7 @@ if($row[$i]['ProductImage']==''){
 echo "<a rel='facebox' href='addimage.php?productID=".$row[$i]['ProductID']."'><img class='thumbnail' src='' width='140' height='40' alt=''>Add Image</a>";
 }
 else{
-echo "<a class='productDetail' rel='facebox' href='viewproduct.php?productID=".$row[$i]['ProductID']."'><img class='thumbnail' src='$uploads/".$row[$i]['ProductImage']."' width='150' height='120' alt=''></a>";
+echo "<a class='productDetail' rel='facebox' href='viewproduct.php?productID=".$row[$i]['ProductID']."'><img class='thumbnail' src='../$uploads/".$row[$i]['ProductImage']."' width='150' height='120' alt=''></a>";
 }
 echo "</li></ul>";
 										echo "</div>";
