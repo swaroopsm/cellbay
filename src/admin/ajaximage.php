@@ -1,6 +1,6 @@
 <?php
 include("../includes/functions.php");
-$path = "$uploads/";
+$path = "../$uploads/";
 $pid=$_POST['pid'];
 	$valid_formats = array("jpg", "png", "gif", "bmp");
 	if(isset($_POST) and $_SERVER['REQUEST_METHOD'] == "POST")
@@ -21,7 +21,7 @@ $pid=$_POST['pid'];
 								{
 								mysql_query("UPDATE products SET ProductImage='$actual_image_name' WHERE ProductID='$pid'");
 									
-									echo "<img style='width:200px;height: 200px;border:solid 1px #dedede;padding:10px;' src='$uploads/".$actual_image_name."'  class='preview'>";
+									echo "<img style='width:200px;height: 200px;border:solid 1px #dedede;padding:10px;' src='../$uploads/".$actual_image_name."'  class='preview'>";
 								}
 							else
 								echo "failed";
