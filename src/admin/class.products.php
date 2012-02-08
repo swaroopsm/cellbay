@@ -1,7 +1,7 @@
 <?php
 class products{
 
-private $name,$brand,$price,$visible,$year,$image;
+private $name,$brand,$price,$visible,$year,$desc,$image;
 
 public function getName(){
 return $this->name;
