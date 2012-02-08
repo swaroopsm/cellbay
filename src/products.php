@@ -82,8 +82,15 @@ $("div#msg").slideUp(500);
         <div class="container">
           <a class="brand" href="index.php">CellBay</a>
           <ul class="nav">
-
+						<?php
+							if(checkSession('loggedin')){ ?>
+								<li><a href="dashboard.php">Home</a></li>	
+							<?php }else{
+						?>
             <li><a href="index.php">Home</a></li>
+            <?php
+            	}
+            ?>
 				<li class="active"><a href="products.php">Products</a></li>
            
 
@@ -96,6 +103,16 @@ $("div#msg").slideUp(500);
 </tr>
 <ul class="nav secondary-nav" >
 <li class="dropdown" id="login">
+<?php
+if(checkSession('loggedin')){
+?>
+<a class="dropdown-toggle" id="" href="#">Account</a>
+<ul class="dropdown-menu" style="width: 300px;padding-left: 10px;padding-top: 10px;">
+<li><a href="response.php?misc=logout">Log Out!</a></li>
+</ul>
+<?php
+}else{
+?>
 <a class="dropdown-toggle" id="" href="#">Login</a>
 <ul class="dropdown-menu" style="width: 300px;padding-left: 10px;padding-top: 20px;">
 <form action="response.php?class=users&module=checklogin" method="post">
@@ -108,6 +125,9 @@ $("div#msg").slideUp(500);
 </li>
 </form>
 </ul>
+<?php
+}
+?>
 </li>
 </ul>
 
@@ -118,9 +138,15 @@ $("div#msg").slideUp(500);
     <div class="container">
     
 <ul style="float: right;list-style-type: none;margin-right: 10px;">
+<?php
+if(!checkSession('loggedin')){
+?>
 <li>
 		<button style="margin-top: 5px;" class="btn success"  data-keyboard="true"  data-backdrop="static" data-controls-modal="modal-from-dom">Sign Up</button>
 	    </li>
+<?php
+}
+?>
 </ul>
       <!-- Main hero unit for a primary marketing message or call to action -->
      <!-- Example row of columns -->
