@@ -38,7 +38,7 @@ if(isset($_GET['productID'])){
 	</tr>
 	<tr>
 		<td>Visibility: &nbsp; 
-		<input style='color: #000;' id='pYear' value='".$pobj->getYear()."'/>
+		<input style='color: #000;' id='pYear' value='".$pobj->getVisible()."'/>
 	</tr>
 	<tr>
 		<td><br><br>
