@@ -23,6 +23,10 @@ public function getYear(){
 return $this->year;
 }
 
+public function getDesc(){
+return $this->desc;
+}
+
 public function getImage(){
 return $this->image;
 }
