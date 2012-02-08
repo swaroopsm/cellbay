@@ -7,9 +7,14 @@ switch($module){
 case 'myphone': $pid=$_GET['pid'];
 								$pobj=new products();
 								$pobj->view($pid);
-								echo "<div style='width: 550px;'><div class='modal-header'>
-								<h3>".$pobj->getBrand()." ".$pobj->getName()."</h3>
-								</div><div class='modal-body'><div style='float: left;width: 500px; height: 350px;border:1px solid #eeeeee;padding: 	5px;'><img width='500' height='350' src='$uploads/".$pobj->getImage()."'/></div>
+								echo "<div style='width: 550px;'>
+								<div class='modal-header' style='float: left;'>
+								<h3>".$pobj->getBrand()." ".$pobj->getName()."</h3>";
+								echo "</div>";
+								if(isset($_SESSION['loggedin'])){
+									echo "<a href='#' title='Add to Cart'><img style='//float: right;' src='images/cart.jpg' width='40' height='40'/></a>";
+								}
+								echo "<div class='modal-body'><div style='float: left;width: 500px; height: 350px;border:1px solid #eeeeee;padding: 	5px;'><img width='500' height='350' src='$uploads/".$pobj->getImage()."'/></div>
 								<div>
 								<center><table style='width: 400px;'>
 								<tr>
@@ -32,9 +37,8 @@ case 'myphone': $pid=$_GET['pid'];
 									<td>
 									<td>
 								</tr>
-								</table>
-								<h4 style='margin-top: -20px;'>Sign In to buy this product</h4></center>
-								</div>
+								</table>";
+								echo "</div>
 								</div></div>";
 break;
 }
