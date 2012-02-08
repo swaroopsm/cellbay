@@ -10,17 +10,19 @@ case 'getPhoneBrand': $brand=$_POST['brand'];
 											echo "<div class='row'>";
 											if($num>1){
 												$row=select("products","*",$where);
+												for($i=0;$i<$num;$i++){
 												echo "<div class='span-one-third'>
 												<h2>".$row[$i]['ProductName']."</h2>
              						 <ul class='media-grid'>
 										    <li>
-									    <a href='subui.php?module=myphone' rel='facebox'>
+									    <a href='subui.php?module=myphone&pid=".$row[$i]['ProductID']."' rel='facebox'>
 										   <img class='thumbnail' src='".$uploads."/".$row[$i]['ProductImage']."' width='250' height='250' alt='".$row[$i]['ProductID']."'>
 								    </a>
 									    </li>
 							    </ul>
     
 				        </div>";
+				        }
 											}
 											else if($num==1){
 												$row=select("products","*",$where);
