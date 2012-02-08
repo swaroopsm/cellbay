@@ -11,8 +11,8 @@ case 'myphone': $pid=$_GET['pid'];
 								<div class='modal-header' style='float: left;'>
 								<h3>".$pobj->getBrand()." ".$pobj->getName()."</h3>";
 								echo "</div>";
-								if(isset($_SESSION['loggedin'])){
-									echo "<a href='#' title='Add to Cart'><img style='//float: right;' src='images/cart.jpg' width='40' height='40'/></a>";
+								if(checkSession('loggedin')){
+									echo "<a href='#".$pid."' title='Add to Cart'><img src='images/cart.jpg' width='40' height='40'/></a>";
 								}
 								else{
 									echo "<a href='#' title='Sign in to buy'><img src='images/cart.jpg' width='40' height='40'/></a>";
