@@ -16,7 +16,7 @@ case 'getPhoneBrand': $brand=$_POST['brand'];
              						 <ul class='media-grid'>
 										    <li>
 									    <a href='subui.php?module=myphone&pid=".$row[$i]['ProductID']."' rel='facebox'>
-										   <img class='thumbnail' src='".$uploads."/".$row[$i]['ProductImage']."' width='250' height='250' alt='".$row[$i]['ProductID']."'>
+										   <img class='thumbnail' src='".$uploads."/".$row[$i]['ProductImage']."' width='250' height='150' alt='".$row[$i]['ProductID']."'>
 								    </a>
 									    </li>
 							    </ul>
