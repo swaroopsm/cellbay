@@ -50,7 +50,7 @@ case 'getPhoneBrand': $brand=$_POST['brand'];
 <?php
 break;
 
-case 'test':
+case 'addtocart':
 echo "Hello :)";
 break;
 }
