@@ -57,8 +57,11 @@ pid=pid.substring(1);
 var uid=$(this).attr("data-userid");
 $.post("ui.php?module=addtocart",{pid: pid, uid: uid},
 function(data){
-$("#msg2").html("<br><center><div class='alert-message success'>"+data+"</div></center>").hide().fadeIn(500);
+$("#msg2").html("<br><center><div class='alert-message success'>Product added to cart!</div></center>").hide().fadeIn(500);
 });
+setTimeout(function(){
+$("#msg2").fadeOut(500);
+},3000);
 return false;
 });
 });
