@@ -31,7 +31,7 @@ case 'myphone': $pid=$_GET['pid'];
 								</tr>
 								
 								<tr>
-									<td><b>Manufactured Year: </b><td>Rs. ".$pobj->getYear()."	
+									<td><b>Manufactured Year: </b><td>".$pobj->getYear()."	
 								</tr>
 								<tr>
 									<td><b>Specification: </b>
