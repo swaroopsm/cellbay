@@ -13,6 +13,7 @@ case 'myphone': $pid=$_GET['pid'];
 								echo "</div>";
 								if(checkSession('loggedin')){
 									echo "<a class='addcart' data-userid='".$_SESSION['uid']."' href='#".$pid."' title='Add to Cart'><img src='images/cart.jpg' width='40' height='40'/></a>";
+									echo "<div id='msg2'></div>";
 								}
 								else{
 									echo "<a href='#' title='Sign in to buy'><img src='images/cart.jpg' width='40' height='40'/></a>";
@@ -50,9 +51,15 @@ break;
 <script type="text/javascript">
 $(document).ready(function(){
 $(".addcart").click(function(){
+$("#msg2").html("<br><center><img src='images/loading.gif'/></center>").hide().show();
 var pid=$(this).attr("href");
 var uid=$(this).attr("data-userid");
-
+//$("#msg2").html(":)").fadeIn(500);
+$.post("ui.php?module=addtocart",
+function(data){
+$("#msg2").html("<br><center><div class='alert-message success'>Added to Cart</div></center>").hide().fadeIn(500);
+});
+return false;
 });
 });
 </script>
