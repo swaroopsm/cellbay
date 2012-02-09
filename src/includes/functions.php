@@ -55,6 +55,27 @@
             }  
        }
 
+	/*
+  * Insert Function
+  */
+            function insert($tbl,$fields,$values){
+                         if(!is_array($fields) || !is_array($values))
+            return 'Error - Fields and values must be sent as an array';
+                        
+        $field_ct  = count($fields);
+        $value_ct = count($values);
+        if($field_ct != $value_ct)
+            return 'Error - Field count and value count do not match.';
+                        
+        $query1 = "INSERT INTO `$tbl` (`";
+        $query1 .= implode('`, `', $fields) . "`) VALUES ('";
+        $query1 .= implode("', '", $values) . "')";
+        if($exec=mysql_query($query1))
+        	return true;
+        else
+        	return false;
+       }
+
 	function numRows($query){
 		return mysql_num_rows($query);
 	}
