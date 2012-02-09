@@ -23,6 +23,9 @@ case 'users':	include("includes/class.users.php");
 									if(numRows($query)==1){
 										$_SESSION['loggedin']=true;
 										$_SESSION['uname']=$uname;
+										$sql2=select("users","*",$where);
+										$uid=$sql2['UserID'];
+										$_SESSION['uid']=$uid;
 										header("location: dashboard.php");
 									}
 									else
