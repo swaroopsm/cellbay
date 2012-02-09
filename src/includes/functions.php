@@ -70,10 +70,8 @@
         $query1 = "INSERT INTO `$tbl` (`";
         $query1 .= implode('`, `', $fields) . "`) VALUES ('";
         $query1 .= implode("', '", $values) . "')";
-        if($exec=mysql_query($query1))
-        	return true;
-        else
-        	return false;
+        $exec=mysql_query($query1);
+        return $exec;
        }
 
 	function numRows($query){
