@@ -12,7 +12,7 @@ case 'myphone': $pid=$_GET['pid'];
 								<h3>".$pobj->getBrand()." ".$pobj->getName()."</h3>";
 								echo "</div>";
 								if(checkSession('loggedin')){
-									echo "<a href='#".$pid."' title='Add to Cart'><img src='images/cart.jpg' width='40' height='40'/></a>";
+									echo "<a class='addcart' data-userid='".$_SESSION['uid']."' href='#".$pid."' title='Add to Cart'><img src='images/cart.jpg' width='40' height='40'/></a>";
 								}
 								else{
 									echo "<a href='#' title='Sign in to buy'><img src='images/cart.jpg' width='40' height='40'/></a>";
@@ -47,3 +47,12 @@ break;
 }
 }
 ?>
+<script type="text/javascript">
+$(document).ready(function(){
+$(".addcart").click(function(){
+var pid=$(this).attr("href");
+var uid=$(this).attr("data-userid");
+
+});
+});
+</script>
