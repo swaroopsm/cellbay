@@ -50,9 +50,13 @@ case 'getPhoneBrand': $brand=$_POST['brand'];
 <?php
 break;
 
-case 'addtocart':
-echo "Hello :)";
-break;
+case 'addtocart': $pid=$_POST['pid'];
+									$uid=$_POST['uid'];
+									$date=date("Y-m-d");
+									$fields=array("ProductID","UserID","OrderDate");
+									$values=array("$pid","$uid","$date");
+									echo insert("orders",$fields,$values);
+									break;
 }
 }
 ?>
