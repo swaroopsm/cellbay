@@ -53,6 +53,7 @@ $(document).ready(function(){
 $(".addcart").click(function(){
 $("#msg2").html("<br><center><img src='images/loading.gif'/></center>").hide().show();
 var pid=$(this).attr("href");
+pid=pid.substring(1);
 var uid=$(this).attr("data-userid");
 $.post("ui.php?module=addtocart",{pid: pid, uid: uid},
 function(data){
