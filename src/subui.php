@@ -54,10 +54,9 @@ $(".addcart").click(function(){
 $("#msg2").html("<br><center><img src='images/loading.gif'/></center>").hide().show();
 var pid=$(this).attr("href");
 var uid=$(this).attr("data-userid");
-//$("#msg2").html(":)").fadeIn(500);
-$.post("ui.php?module=addtocart",
+$.post("ui.php?module=addtocart",{pid: pid, uid: uid},
 function(data){
-$("#msg2").html("<br><center><div class='alert-message success'>Added to Cart</div></center>").hide().fadeIn(500);
+$("#msg2").html("<br><center><div class='alert-message success'>"+data+"</div></center>").hide().fadeIn(500);
 });
 return false;
 });
