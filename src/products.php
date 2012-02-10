@@ -146,6 +146,13 @@ if(!checkSession('loggedin')){
 	    </li>
 <?php
 }
+else{
+?>
+<li>
+		<button style="margin-top: 5px;" class="btn success"  data-keyboard="true"  data-backdrop="static" data-controls-modal="modal-from-dom2">View Cart &raquo;</button>
+	    </li>
+<?php
+}
 ?>
 </ul>
       <!-- Main hero unit for a primary marketing message or call to action -->
@@ -334,6 +341,27 @@ if(!checkSession('loggedin')){
 <td>&nbsp;
 <td><input id="upassword" type="password" placeholder="This will be used to login"/>
 </tr>
+</div>
+<div class="modal-footer">
+<a class="btn danger" id="formClose" href="#">Cancel</a>
+<a class="btn success" id="joinBtn" href="#">Submit</a>
+</div>
+    
+</div>
+
+<div id="modal-from-dom2" class="modal hide fade in" style="display: none;border: 8px solid #ccc;">
+<div class="modal-header">
+<a class="close" href="#">×</a>
+<h3>Your Cart</h3>
+</div>
+<div class="modal-body">
+<center><div  id="loader"></div></center>
+<div id="msg">
+
+</div>
+<?php
+	
+?>
 </div>
 <div class="modal-footer">
 <a class="btn danger" id="formClose" href="#">Cancel</a>
