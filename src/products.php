@@ -360,7 +360,21 @@ else{
 
 </div>
 <?php
-	
+	if(checkSession('loggedin')){
+		$where="UserID=$_SESSION[uid] AND OrderStatus=0";
+		$query=frameQuery("orders","*",$where);
+		$num=mysql_num_rows(mysql_query($query));
+		$row=select("orders","*",$where);
+		if($num>1){
+			
+		}
+		else if($num==1){
+		
+		}
+		else{
+			echo "No Orders";
+		}
+	}
 ?>
 </div>
 <div class="modal-footer">
