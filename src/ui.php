@@ -60,14 +60,11 @@ case 'addtocart': $pid=$_POST['pid'];
 									break;
 									
 case 'viewcart': ?>
-<script type="text/javascript">
-getElementById(this).innerHTML = "";
-</script>
 <div style='width: 500px;'>
 	<div class="modal-header">
 <h3>View Cart</h3>
 </div>
-<div class="modal-body">
+<div class="modal-body" style='overflow: auto;'>
 <?php
 if(checkSession('loggedin')){
 		$where="UserID=$_SESSION[uid] AND OrderStatus=0";
@@ -80,16 +77,22 @@ if(checkSession('loggedin')){
 						<th>Product</th>
 						<th>Action</th>
 					</tr>";
+		$pobj=new products();
 		if($num>1){
-			
+			for($i=0;$i<$num;$i++){
+				$pobj->view($row[$i]['ProductID']);
+			echo "<tr>
+							 <td>".$row[$i]['OrderID'].
+							"<td>".$pobj->getBrand()." ".$pobj->getName().
+							"<td><a href='#".$row[$i]['OrderID']."' class='check'><img src='images/check.png' width='20' height='20'/></a>&nbsp;&nbsp<a href='#".$row[$i]['OrderID']."' class='cross'><img src='images/cross.png' width='20' height='20'/></a>";
+			}	
 		}
 		else if($num==1){
-			$pobj=new products();
 			$pobj->view($row['ProductID']);
 			echo "<tr>
 							 <td>".$row['OrderID'].
 							"<td>".$pobj->getBrand()." ".$pobj->getName().
-							"<td><a href='#'><img src='images/check.png' width='20' height='20'/></a>&nbsp;&nbsp<a href='#'><img src='images/cross.png' width='20' height='20'/></a>"
+							"<td><a class='check' href='#".$row['OrderID']."'><img src='images/check.png' width='20' height='20'/></a>&nbsp;&nbsp<a class='cross' href='#".$row['OrderID']."'><img src='images/cross.png' width='20' height='20'/></a>"
 							;
 		}
 		
