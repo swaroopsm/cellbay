@@ -120,7 +120,11 @@ var pid=$(this).attr("alt");
 $(".check").click(function(){
 	var oid=$(this).attr("href");
 	oid=oid.substring("1");
-	//alert(oid);
-	$("#row"+oid).fadeOut(500);
+	$.post("response.php?misc=confirmOrder",{oid: oid},
+	function(data){
+		if(data==1){
+			$("#row"+oid).fadeOut(500);
+		}
+	});
 });
 </script>
