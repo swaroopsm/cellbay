@@ -133,7 +133,7 @@
                 }  
             }  
         $query1 .= " WHERE $where";
-                $exec=query($query1);
+                $exec=mysql_query($query1);
         return $exec;
                 }
 	connect();
