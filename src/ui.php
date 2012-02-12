@@ -81,7 +81,7 @@ if(checkSession('loggedin')){
 		if($num>1){
 			for($i=0;$i<$num;$i++){
 				$pobj->view($row[$i]['ProductID']);
-			echo "<tr>
+			echo "<tr id='row".$row[$i]['OrderID']."'>
 							 <td>".$row[$i]['OrderID'].
 							"<td>".$pobj->getBrand()." ".$pobj->getName().
 							"<td><a href='#".$row[$i]['OrderID']."' title='Confirm Order' class='check'><img src='images/check.png' width='20' height='20'/></a>&nbsp;&nbsp<a title='Cancel Order' href='#".$row[$i]['OrderID']."' class='cross'><img src='images/cross.png' width='20' height='20'/></a>";
@@ -89,7 +89,7 @@ if(checkSession('loggedin')){
 		}
 		else if($num==1){
 			$pobj->view($row['ProductID']);
-			echo "<tr>
+			echo "<tr id='row".$row['OrderID']."'>
 							 <td>".$row['OrderID'].
 							"<td>".$pobj->getBrand()." ".$pobj->getName().
 							"<td><a title='Confirm Order' class='check' href='#".$row['OrderID']."'><img src='images/check.png' width='20' height='20'/></a>&nbsp;&nbsp<a title='Cancel Order' class='cross' href='#".$row['OrderID']."'><img src='images/cross.png' width='20' height='20'/></a>"
@@ -120,6 +120,7 @@ var pid=$(this).attr("alt");
 $(".check").click(function(){
 	var oid=$(this).attr("href");
 	oid=oid.substring("1");
-	alert(oid);
+	//alert(oid);
+	$("#row"+oid).fadeOut(500);
 });
 </script>
