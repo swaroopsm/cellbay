@@ -44,6 +44,12 @@ else{
 		switch($module){
 			case 'logout':	logout('loggedin','index.php');
 									break;
+									
+			case 'confirmOrder': $oid=$_POST['oid'];
+													 $where="OrderID=$oid";
+													 $cc=update("orders",array("OrderStatus"),array(1),$where);
+													 echo $cc;
+													 break;
 		}
 	}
 }
