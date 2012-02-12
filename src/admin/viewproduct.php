@@ -52,10 +52,3 @@ if(isset($_GET['productID'])){
 	</div></div>";
 }
 ?>
-<script type='text/javascript'>
-$(document).ready(function(){
-$("#save").click(function(){
-
-});
-});
-</script>
