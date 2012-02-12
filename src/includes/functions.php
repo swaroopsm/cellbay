@@ -73,6 +73,16 @@
         $exec=mysql_query($query1);
         return $exec;
        }
+       
+  /*
+  * Delete Function
+  */
+  function delete($tbl,$where=null){
+  	$query1 = 'DELETE FROM '.$tbl;  
+            if($where != null)  
+                $query1 .= ' WHERE '.$where;  
+    return mysql_query($query1);
+  }
 
 	function numRows($query){
 		return mysql_num_rows($query);
