@@ -62,7 +62,9 @@ case 'viewcart': ?>
 <script type="text/javascript">
 getElementById(this).innerHTML = "";
 </script>
-
+<div style='width: 500px;'>
+	
+</div>
 <?php
 break;
 }
