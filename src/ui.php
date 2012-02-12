@@ -1,6 +1,7 @@
 <?php
 if(isset($_GET['module'])){
 include("includes/functions.php");
+include("admin/class.products.php");
 $module=$_GET['module'];
 switch($module){
 case 'getPhoneBrand': $brand=$_POST['brand'];
@@ -63,7 +64,42 @@ case 'viewcart': ?>
 getElementById(this).innerHTML = "";
 </script>
 <div style='width: 500px;'>
-	
+	<div class="modal-header">
+<h3>View Cart</h3>
+</div>
+<div class="modal-body">
+<?php
+if(checkSession('loggedin')){
+		$where="UserID=$_SESSION[uid] AND OrderStatus=0";
+		$query=frameQuery("orders","*",$where);
+		$num=mysql_num_rows(mysql_query($query));
+		$row=select("orders","*",$where);
+		echo "<table>";
+		echo "<tr>
+						<th>Order ID</th>
+						<th>Product</th>
+						<th>Action</th>
+					</tr>";
+		if($num>1){
+			
+		}
+		else if($num==1){
+			$pobj=new products();
+			$pobj->view($row['ProductID']);
+			echo "<tr>
+							 <td>".$row['OrderID'].
+							"<td>".$pobj->getBrand()." ".$pobj->getName().
+							"<td><a href='#'><img src='images/check.png' width='20' height='20'/></a>&nbsp;&nbsp<a href='#'><img src='images/cross.png' width='20' height='20'/></a>"
+							;
+		}
+		
+		else{
+			echo "No Orders";
+		}
+		echo "</table>";
+	}
+?>
+</div>
 </div>
 <?php
 break;
