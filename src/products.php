@@ -1,6 +1,7 @@
 <?php
 include("includes/functions.php");
-include("admin/class.products.php")
+include("admin/class.products.php");
+include("includes/class.users.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -37,7 +38,7 @@ include("admin/class.products.php")
    <script src="js/facebox.js"></script>
 <script type="text/javascript" charset="utf-8">
   $(window).load(function() {
-  	
+  	  $('a[rel*=facebox]').facebox() ;
     $('.flexslider').flexslider();
     $(".thumbnail").click(function(){
 var brand=$(this).attr("alt");
@@ -149,7 +150,7 @@ if(!checkSession('loggedin')){
 else{
 ?>
 <li>
-		<button style="margin-top: 5px;" class="btn success"  data-keyboard="true"  data-backdrop="static" data-controls-modal="modal-from-dom2">View Cart &raquo;</button>
+		<a rel='facebox' href='ui.php?ui=viewcart'><button style="margin-top: 5px;" class="btn success" >View Cart &raquo;</button></a>
 	    </li>
 <?php
 }
@@ -359,23 +360,6 @@ else{
 <div id="msg">
 
 </div>
-<?php
-	if(checkSession('loggedin')){
-		$where="UserID=$_SESSION[uid] AND OrderStatus=0";
-		$query=frameQuery("orders","*",$where);
-		$num=mysql_num_rows(mysql_query($query));
-		$row=select("orders","*",$where);
-		if($num>1){
-			
-		}
-		else if($num==1){
-		
-		}
-		else{
-			echo "No Orders";
-		}
-	}
-?>
 </div>
 <div class="modal-footer">
 <a class="btn danger" id="formClose" href="#">Cancel</a>
