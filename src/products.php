@@ -150,7 +150,7 @@ if(!checkSession('loggedin')){
 else{
 ?>
 <li>
-		<a rel='facebox' href='ui.php?ui=viewcart'><button style="margin-top: 5px;" class="btn success" >View Cart &raquo;</button></a>
+		<a rel='facebox' href='ui.php?module=viewcart'><button style="margin-top: 5px;" class="btn success" >View Cart &raquo;</button></a>
 	    </li>
 <?php
 }
