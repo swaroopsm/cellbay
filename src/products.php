@@ -38,7 +38,7 @@ include("includes/class.users.php");
    <script src="js/facebox.js"></script>
 <script type="text/javascript" charset="utf-8">
   $(window).load(function() {
-  	  $('a[rel*=facebox]').facebox() ;
+  	  $('a[rel2*=facebox]').facebox() ;
     $('.flexslider').flexslider();
     $(".thumbnail").click(function(){
 var brand=$(this).attr("alt");
@@ -150,7 +150,7 @@ if(!checkSession('loggedin')){
 else{
 ?>
 <li>
-		<a rel='facebox' href='ui.php?module=viewcart'><button style="margin-top: 5px;" class="btn success" >View Cart &raquo;</button></a>
+		<a rel2='facebox' href='subui.php?module=viewcart'><button style="margin-top: 5px;" class="btn success" >View Cart &raquo;</button></a>
 	    </li>
 <?php
 }
