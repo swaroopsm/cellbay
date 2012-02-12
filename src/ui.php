@@ -58,9 +58,12 @@ case 'addtocart': $pid=$_POST['pid'];
 									echo insert("orders",$fields,$values);
 									break;
 									
-case 'viewcart': echo "View Cart";
+case 'viewcart': ?>
+<script type="text/javascript">
+getElementById(this).innerHTML = "";
+</script>
 
-
+<?php
 break;
 }
 }
