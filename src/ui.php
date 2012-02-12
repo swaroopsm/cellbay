@@ -127,4 +127,14 @@ $(".check").click(function(){
 		}
 	});
 });
+$(".cross").click(function(){
+	var oid=$(this).attr("href");
+	oid=oid.substring("1");
+	$.post("response.php?misc=cancelOrder",{oid: oid},
+	function(data){
+		if(data==1){
+			$("#row"+oid).fadeOut(500);
+		}
+	});
+});
 </script>
