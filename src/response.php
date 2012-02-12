@@ -50,6 +50,12 @@ else{
 													 $cc=update("orders",array("OrderStatus"),array(1),$where);
 													 echo $cc;
 													 break;
+													 
+			case 'cancelOrder': $oid=$_POST['oid'];
+													$where="OrderID=$oid";
+													$cc=delete("orders",$where);
+													echo $cc;
+													break;
 		}
 	}
 }
