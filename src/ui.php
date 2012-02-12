@@ -97,7 +97,7 @@ if(checkSession('loggedin')){
 		}
 		
 		else{
-			echo "No Orders";
+			echo "<center><h3>Your Cart is empty</h3></center>";
 		}
 		echo "</table>";
 	}
@@ -116,5 +116,10 @@ break;
 $('a[rel*=facebox]').facebox() ;
 $(".thumbnail").click(function(){
 var pid=$(this).attr("alt");
+});
+$(".check").click(function(){
+	var oid=$(this).attr("href");
+	oid=oid.substring("1");
+	alert(oid);
 });
 </script>
