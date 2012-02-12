@@ -84,7 +84,7 @@ if(checkSession('loggedin')){
 			echo "<tr>
 							 <td>".$row[$i]['OrderID'].
 							"<td>".$pobj->getBrand()." ".$pobj->getName().
-							"<td><a href='#".$row[$i]['OrderID']."' class='check'><img src='images/check.png' width='20' height='20'/></a>&nbsp;&nbsp<a href='#".$row[$i]['OrderID']."' class='cross'><img src='images/cross.png' width='20' height='20'/></a>";
+							"<td><a href='#".$row[$i]['OrderID']."' title='Confirm Order' class='check'><img src='images/check.png' width='20' height='20'/></a>&nbsp;&nbsp<a title='Cancel Order' href='#".$row[$i]['OrderID']."' class='cross'><img src='images/cross.png' width='20' height='20'/></a>";
 			}	
 		}
 		else if($num==1){
@@ -92,7 +92,7 @@ if(checkSession('loggedin')){
 			echo "<tr>
 							 <td>".$row['OrderID'].
 							"<td>".$pobj->getBrand()." ".$pobj->getName().
-							"<td><a class='check' href='#".$row['OrderID']."'><img src='images/check.png' width='20' height='20'/></a>&nbsp;&nbsp<a class='cross' href='#".$row['OrderID']."'><img src='images/cross.png' width='20' height='20'/></a>"
+							"<td><a title='Confirm Order' class='check' href='#".$row['OrderID']."'><img src='images/check.png' width='20' height='20'/></a>&nbsp;&nbsp<a title='Cancel Order' class='cross' href='#".$row['OrderID']."'><img src='images/cross.png' width='20' height='20'/></a>"
 							;
 		}
 		
