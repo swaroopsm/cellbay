@@ -107,7 +107,11 @@ $('a.dropdown-toggle').click(function()  {$('li.dropdown').toggleClass('open') }
 $(".clearOrder").click(function(){
 	var oid=$(this).attr("href");
 	oid=oid.substring("1");
-	$("#row"+oid).fadeOut(500);
+	$.post("response.php?module=clearOrder",{oid: oid},
+	function(data){
+		if(data==1)
+			$("#row"+oid).fadeOut(500);
+	});
 });
 });
 </script>
