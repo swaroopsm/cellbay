@@ -143,7 +143,8 @@ $('a.dropdown-toggle').click(function()  {$('li.dropdown').toggleClass('open') }
           <div class="span10">
           <center><div id="loader"><img src='../images/loading.gif'/></div></center>
             <div id="ui">
-            
+            	<h3>Recent Orders</h3>
+            	
             </div>
           </div>
           <div class="span4">
