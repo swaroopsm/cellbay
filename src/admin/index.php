@@ -114,6 +114,12 @@ $(".clearOrder").click(function(){
 			$("#row"+oid).fadeOut(500);
 	});
 });
+$("#settings").click(function(){
+	$.post("ui.php?ui=settings",{},
+	function(data){
+		$("#ui").html(data).hide().fadeIn(500);
+	});
+});
 });
 </script>
   </head>
