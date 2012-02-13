@@ -104,6 +104,7 @@ $("#loader").hide(100);
 return false;
 })
 $('a.dropdown-toggle').click(function()  {$('li.dropdown').toggleClass('open') } );
+
 });
 </script>
   </head>
@@ -161,7 +162,7 @@ $('a.dropdown-toggle').click(function()  {$('li.dropdown').toggleClass('open') }
             				if($num==1){
             					$pobj->view($row['ProductID']);
             						$uobj->view($row['UserID']);
-            						echo "<tr>";
+            						echo "<tr id='row".$row['OrderID']."'>";
             							echo "<td>".$row['OrderID'].
             							"<td><a class='pname' href='#".$row['ProductID']."'>".$pobj->getBrand().
             							" ".$pobj->getName().
@@ -174,7 +175,7 @@ $('a.dropdown-toggle').click(function()  {$('li.dropdown').toggleClass('open') }
             					for($i=0;$i<$num;$i++){
             						$pobj->view($row[$i]['ProductID']);
             						$uobj->view($row[$i]['UserID']);
-            						echo "<tr>";
+            						echo "<tr id='row".$row[$i]['OrderID']."'>";
             							echo "<td>".$row[$i]['OrderID'].
             							"<td><a class='pname' href='#".$row[$i]['ProductID']."'>".$pobj->getBrand().
             							" ".$pobj->getName().
