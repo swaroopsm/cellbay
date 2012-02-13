@@ -112,6 +112,20 @@ case 'viewProdByID': $pid=$_GET['pid'];
 	</tr>
 	</div>";
 										 break;
+										 
+	case 'settings': $row=select("admin","*","AdminID=$_SESSION[aid]");
+	
+	?>
+	
+	<h4>Account Settings</h4>
+	<table>
+		<tr>
+			<td>Account ID: <?php echo $row['AdminName'] ?>
+			<td>
+		</tr>
+	</table>
+	
+	<?php								 break;
 }
 }
 ?>
