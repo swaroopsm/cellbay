@@ -1,6 +1,7 @@
 <?php
 include("../includes/functions.php");
 include("class.products.php");
+include("../includes/class.users.php");
 if(checkSession('aloggedin')==true)
 {
 ?>
@@ -156,17 +157,21 @@ $('a.dropdown-toggle').click(function()  {$('li.dropdown').toggleClass('open') }
             				$row=select("orders","*");
             				$num=mysql_num_rows(mysql_query(frameQuery("orders","*")));
             				$pobj=new products();
+            				$uobj=new users();
             				if($num==1){
             					
             				}
             				else if($num>1){
             					for($i=0;$i<$num;$i++){
             						$pobj->view($row[$i]['ProductID']);
+            						$uobj->view($row[$i]['UserID']);
             						echo "<tr>";
             							echo "<td>".$row[$i]['OrderID'].
-            							"<td>".$pobj->getBrand().
+            							"<td><a class='pname' href='#".$row[$i]['ProductID']."'>".$pobj->getBrand().
             							" ".$pobj->getName().
-            							" ";
+            							"</a><td>".$uobj->getUName().
+            							"<td>".$row[$i]['OrderDate'].
+            							"<td>&nbsp;&nbsp;&nbsp;<a title='Clear Order' href='#".$row[$i]['OrderID']."'><img src='../images/check.png' width='20' height='20'/></a>";
             						echo "</tr>";
             					}
             				}
