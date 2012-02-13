@@ -104,7 +104,11 @@ $("#loader").hide(100);
 return false;
 })
 $('a.dropdown-toggle').click(function()  {$('li.dropdown').toggleClass('open') } );
-
+$(".clearOrder").click(function(){
+	var oid=$(this).attr("href");
+	oid=oid.substring("1");
+	$("#row"+oid).fadeOut(500);
+});
 });
 </script>
   </head>
