@@ -164,8 +164,8 @@ $(".clearOrder").click(function(){
             			<th>Order Date</th>
             			<th>Action</th>
             			<?php
-            				$row=select("orders","*");
-            				$num=mysql_num_rows(mysql_query(frameQuery("orders","*")));
+            				$row=select("orders","*","OrderStatus=1");
+            				$num=mysql_num_rows(mysql_query(frameQuery("orders","*","OrderStatus=1")));
             				$pobj=new products();
             				$uobj=new users();
             				if($num==1){
