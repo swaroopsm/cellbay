@@ -167,7 +167,7 @@ $('a.dropdown-toggle').click(function()  {$('li.dropdown').toggleClass('open') }
             							" ".$pobj->getName().
             							"</a><td>".$uobj->getUName().
             							"<td>".$row['OrderDate'].
-            							"<td>&nbsp;&nbsp;&nbsp;<a title='Clear Order' href='#".$row['OrderID']."'><img src='../images/check.png' width='20' height='20'/></a>";
+            							"<td>&nbsp;&nbsp;&nbsp;<a title='Clear Order' class='clearOrder' href='#".$row['OrderID']."'><img src='../images/check.png' width='20' height='20'/></a>";
             						echo "</tr>";
             				}
             				else if($num>1){
@@ -180,7 +180,7 @@ $('a.dropdown-toggle').click(function()  {$('li.dropdown').toggleClass('open') }
             							" ".$pobj->getName().
             							"</a><td>".$uobj->getUName().
             							"<td>".$row[$i]['OrderDate'].
-            							"<td>&nbsp;&nbsp;&nbsp;<a title='Clear Order' href='#".$row[$i]['OrderID']."'><img src='../images/check.png' width='20' height='20'/></a>";
+            							"<td>&nbsp;&nbsp;&nbsp;<a class='clearOrder' title='Clear Order' href='#".$row[$i]['OrderID']."'><img src='../images/check.png' width='20' height='20'/></a>";
             						echo "</tr>";
             					}
             				}
