@@ -85,6 +85,7 @@ if(checkSession('aloggedin')==true)
 <script type="text/javascript" src="../js/facebox.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
+$('a[rel2*=facebox]').facebox() ;
 $("#loader").hide();
 $("#productsSub").hide();
 $("#productsMenu").click(function(){
@@ -172,7 +173,7 @@ $(".clearOrder").click(function(){
             						$uobj->view($row['UserID']);
             						echo "<tr id='row".$row['OrderID']."'>";
             							echo "<td>".$row['OrderID'].
-            							"<td><a class='pname' href='#".$row['ProductID']."'>".$pobj->getBrand().
+            							"<td><a rel2='facebox' class='pname' href='ui.php?ui=viewProdByID&pid=".$row['ProductID']."'>".$pobj->getBrand().
             							" ".$pobj->getName().
             							"</a><td>".$uobj->getUName().
             							"<td>".$row['OrderDate'].
@@ -185,7 +186,7 @@ $(".clearOrder").click(function(){
             						$uobj->view($row[$i]['UserID']);
             						echo "<tr id='row".$row[$i]['OrderID']."'>";
             							echo "<td>".$row[$i]['OrderID'].
-            							"<td><a class='pname' href='#".$row[$i]['ProductID']."'>".$pobj->getBrand().
+            							"<td><a rel2='facebox' class='pname' href='ui.php?ui=viewProdByID&pid=".$row[$i]['ProductID']."'>".$pobj->getBrand().
             							" ".$pobj->getName().
             							"</a><td>".$uobj->getUName().
             							"<td>".$row[$i]['OrderDate'].
