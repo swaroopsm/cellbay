@@ -136,6 +136,8 @@ $(".clearOrder").click(function(){
 <li class="dropdown" id="login">
 <a class="dropdown-toggle" id="" href="#">Account</a>
 <ul class="dropdown-menu" style="width: 300px;padding-left: 10px;padding-top: 10px;">
+<li><a href="#" id='settings'>Settings</a></li>
+<li class="divider"></li>
 <li><a href="response.php?module=logout">Log Out!</a></li>
 </ul>
 </li>
@@ -217,9 +219,6 @@ $(".clearOrder").click(function(){
             			<li>&nbsp;</li>
             			<li>&raquo; <a href="#" id="viewProd">View Products</a></li>
             		</td>
-            	</tr>
-            	<tr>
-            		<td><a href="#" id="accountMenu">Account</a>
             	</tr>
             	<tr>
             		<td>
