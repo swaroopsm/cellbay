@@ -29,6 +29,11 @@ if(isset($_GET['module'])){
 											 $obj=new products();
 											 $obj->insert($fields,$values);
 											 break;
+											 
+		case 'clearOrder': $oid=$_POST['oid'];
+											 $cc=delete("orders","OrderID=$oid");
+											 echo $cc;
+											 break;
 				
 	}
 }
