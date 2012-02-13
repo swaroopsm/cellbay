@@ -92,6 +92,26 @@ echo "</li></ul>";
 </div>
 <?php
 break;
+
+case 'viewProdByID': $pid=$_GET['pid'];
+										 include_once("class.products.php");
+										 $pobj=new products();
+										 $pobj->view($pid);
+										 echo "<div style='width: 500px;'><h5>".$pobj->getBrand()." ".$pobj->getName()."</h5><hr><div style='float: left;width: 250px;'><img class='thumbnail' src='../$uploads/".$pobj->getImage()."' style='width: 250px;height: 200px;border: 1px solid #dedede;padding:10px; '/></div>
+	<div	style='float:left;margin-left: 40px;font-size: 14px;'>
+	<tr>
+		<td><b><u>Specifications:</u><br></b>
+		<td>".str_replace(";",",<br>",$pobj->getDesc())."
+	</tr>
+	<tr>
+		<td><br><br>
+	</tr>
+	<tr>
+		<td><b><u>Price:</b></u><br>
+		<td>Rs. ".$pobj->getPrice()."
+	</tr>
+	</div>";
+										 break;
 }
 }
 ?>
