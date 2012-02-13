@@ -1,5 +1,6 @@
 <?php
 include("../includes/functions.php");
+include("class.products.php");
 if(checkSession('aloggedin')==true)
 {
 ?>
@@ -154,11 +155,20 @@ $('a.dropdown-toggle').click(function()  {$('li.dropdown').toggleClass('open') }
             			<?php
             				$row=select("orders","*");
             				$num=mysql_num_rows(mysql_query(frameQuery("orders","*")));
+            				$pobj=new products();
             				if($num==1){
             					
             				}
             				else if($num>1){
-            					
+            					for($i=0;$i<$num;$i++){
+            						$pobj->view($row[$i]['ProductID']);
+            						echo "<tr>";
+            							echo "<td>".$row[$i]['OrderID'].
+            							"<td>".$pobj->getBrand().
+            							" ".$pobj->getName().
+            							" ";
+            						echo "</tr>";
+            					}
             				}
             				else{
             					echo "<center><h4>All orders have been cleared!</h4></center>";
