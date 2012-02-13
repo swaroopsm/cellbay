@@ -159,7 +159,16 @@ $('a.dropdown-toggle').click(function()  {$('li.dropdown').toggleClass('open') }
             				$pobj=new products();
             				$uobj=new users();
             				if($num==1){
-            					
+            					$pobj->view($row['ProductID']);
+            						$uobj->view($row['UserID']);
+            						echo "<tr>";
+            							echo "<td>".$row['OrderID'].
+            							"<td><a class='pname' href='#".$row['ProductID']."'>".$pobj->getBrand().
+            							" ".$pobj->getName().
+            							"</a><td>".$uobj->getUName().
+            							"<td>".$row['OrderDate'].
+            							"<td>&nbsp;&nbsp;&nbsp;<a title='Clear Order' href='#".$row['OrderID']."'><img src='../images/check.png' width='20' height='20'/></a>";
+            						echo "</tr>";
             				}
             				else if($num>1){
             					for($i=0;$i<$num;$i++){
