@@ -144,7 +144,28 @@ $('a.dropdown-toggle').click(function()  {$('li.dropdown').toggleClass('open') }
           <center><div id="loader"><img src='../images/loading.gif'/></div></center>
             <div id="ui">
             	<h3>Recent Orders</h3>
-            	
+            	<table>
+            		<tr>
+            			<th>Order ID</th>
+            			<th>Product Name</th>
+            			<th>User Name</th>
+            			<th>Order Date</th>
+            			<th>Action</th>
+            			<?php
+            				$row=select("orders","*");
+            				$num=mysql_num_rows(mysql_query(frameQuery("orders","*")));
+            				if($num==1){
+            					
+            				}
+            				else if($num>1){
+            					
+            				}
+            				else{
+            					echo "<center><h4>All orders have been cleared!</h4></center>";
+            				}
+            			?>
+            		</tr>
+            	</table>
             </div>
           </div>
           <div class="span4">
