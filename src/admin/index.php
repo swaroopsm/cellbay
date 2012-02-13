@@ -127,7 +127,7 @@ $(".clearOrder").click(function(){
           <ul class="nav">
 
            
-            <li class="active"><a href="#">Home</a></li>
+            <li class="active"><a href="index.php">Home</a></li>
             <li><a href="#help">Help</a></li>
 
           </ul>
@@ -206,7 +206,7 @@ $(".clearOrder").click(function(){
             <h3>Secondary content</h3>
             <table class="table">
             	<tr>
-            		<td><a href="#" id="home">Home</a>
+            		<td><a href="index.php" id="home">Home</a>
             	</tr>
             	<tr>
             		<td><a href="#a" id="productsMenu">Products</a>
@@ -219,7 +219,7 @@ $(".clearOrder").click(function(){
             		</td>
             	</tr>
             	<tr>
-            		<td><a href="#a" id="productsMenu">Orders</a>
+            		<td><a href="#" id="accountMenu">Account</a>
             	</tr>
             	<tr>
             		<td>
