@@ -71,7 +71,7 @@ case 'viewproduct': $row=select("products","*");
 										if($count>1){
 										echo "<div class='row'>";
 										for($i=0;$i<$count;$i++){
-										echo "<div class='span3'>";
+										echo "<div class='span3' id='prodRow".$row[$i]['ProductID']."'>";
 										echo "<h5>".$row[$i]['ProductBrand']." ".$row[$i]['ProductName']."</h5><ul class='media-grid'><li>";
 if($row[$i]['ProductImage']==''){
 echo "<a rel='facebox' href='addimage.php?productID=".$row[$i]['ProductID']."'><img class='thumbnail' src='' width='140' height='40' alt=''>Add Image</a>";
@@ -80,7 +80,7 @@ else{
 echo "<a class='productDetail' rel='facebox' href='viewproduct.php?productID=".$row[$i]['ProductID']."'><img class='thumbnail' src='../$uploads/".$row[$i]['ProductImage']."' width='150' height='120' alt=''></a>";
 }
 echo "</li></ul>";
-										echo "<center><a href='#'>Remove</a></center></div>";
+										echo "<center><a href='#".$row[$i]['ProductID']."' class='removeProd'>Remove</a></center></div>";
 										}
 										echo "</div>";
 										}
@@ -171,6 +171,11 @@ $("#msg").fadeOut(500);
 });
 $("#oldPassword").change(function(){
 	
+});
+$(".removeProd").click(function(){
+	var pid=$(this).attr("href");
+	pid=pid.substring("1");
+	$("#prodRow"+pid).fadeOut(500);
 });
 });
 </script>
