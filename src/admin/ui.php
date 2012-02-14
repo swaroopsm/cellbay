@@ -132,8 +132,13 @@ case 'viewProdByID': $pid=$_GET['pid'];
 			<td>New Password: 
 			<td><input type='password' id='newPassword'/>
 		</tr>
-	</table>
+		<tr>
+			<td><td>
+			<td><button class='btn success'>Save Settings</button>
+		</tr>
+			</table>
 	
+		
 	<?php								 break;
 }
 }
