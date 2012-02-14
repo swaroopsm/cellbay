@@ -175,7 +175,12 @@ $("#oldPassword").change(function(){
 $(".removeProd").click(function(){
 	var pid=$(this).attr("href");
 	pid=pid.substring("1");
-	$("#prodRow"+pid).fadeOut(500);
+	$.post("response.php?module=delProd",{pid: pid},
+	function(data){
+		if(data==1){
+			$("#prodRow"+pid).fadeOut(500);
+		}
+	});
 });
 });
 </script>
