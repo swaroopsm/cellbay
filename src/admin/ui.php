@@ -80,7 +80,7 @@ else{
 echo "<a class='productDetail' rel='facebox' href='viewproduct.php?productID=".$row[$i]['ProductID']."'><img class='thumbnail' src='../$uploads/".$row[$i]['ProductImage']."' width='150' height='120' alt=''></a>";
 }
 echo "</li></ul>";
-										echo "</div>";
+										echo "<center><a href='#'>Remove</a></center></div>";
 										}
 										echo "</div>";
 										}
