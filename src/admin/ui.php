@@ -127,10 +127,12 @@ case 'viewProdByID': $pid=$_GET['pid'];
 		<tr>
 			<td>Old Password: 
 			<td><input type='password' id='oldPassword'/>
+			<td>
 		</tr>
 		<tr>
 			<td>New Password: 
 			<td><input type='password' id='newPassword'/>
+			<td>
 		</tr>
 		<tr>
 			<td><td>
