@@ -34,6 +34,17 @@ if(isset($_GET['module'])){
 											 $cc=delete("orders","OrderID=$oid");
 											 echo $cc;
 											 break;
+											 
+		case 'delProd': $pid=$_POST['pid'];
+										$pobj=new products();
+										$pobj->view($pid);
+										$loc=$pobj->getImage();
+										$cc=delete("products","ProductID=$pid");
+										if($cc){
+											unlink("../uploads/".$loc);
+										}
+										echo $cc;
+										break;
 				
 	}
 }
