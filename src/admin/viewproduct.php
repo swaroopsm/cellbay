@@ -60,6 +60,10 @@ if(isset($_GET['productID'])){
 			var pPrice=$("#pPrice").val();
 			var pVisible=$("#pVisible").val();
 			var pYear=$("#pYear").val();
+			$.post("response.php?module=updateProduct",{pName: pName, pBrand: pBrand, pPrice: pPrice, pVisible: pVisible, pYear: pYear},
+			function(data){
+				alert(data);
+			});
 		});
 	});
 </script>
