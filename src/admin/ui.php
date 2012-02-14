@@ -118,10 +118,19 @@ case 'viewProdByID': $pid=$_GET['pid'];
 	?>
 	
 	<h4>Account Settings</h4>
-	<table>
+	<table style='font-size: 14px;'>
 		<tr>
-			<td>Account ID: <?php echo $row['AdminName'] ?>
+			<td>Account ID: 
+			<td><?php echo $row['AdminName'] ?>
 			<td>
+		</tr>
+		<tr>
+			<td>Old Password: 
+			<td><input type='password' id='oldPassword'/>
+		</tr>
+		<tr>
+			<td>New Password: 
+			<td><input type='password' id='newPassword'/>
 		</tr>
 	</table>
 	
