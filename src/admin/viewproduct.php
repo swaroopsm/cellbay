@@ -24,7 +24,7 @@ if(isset($_GET['productID'])){
 	</tr>
 	<tr>
 		<td>Price: &nbsp;&nbsp;&nbsp;&nbsp; 
-		<input style='color: #000;' id='pBrand' value='".$pobj->getPrice()."'/>
+		<input style='color: #000;' id='pPrice' value='".$pobj->getPrice()."'/>
 	</tr>
 	<tr>
 		<td><br><br>
@@ -38,7 +38,7 @@ if(isset($_GET['productID'])){
 	</tr>
 	<tr>
 		<td>Visibility: &nbsp; 
-		<input style='color: #000;' id='pYear' value='".$pobj->getVisible()."'/>
+		<input style='color: #000;' id='pVisible' value='".$pobj->getVisible()."'/>
 	</tr>
 	<tr>
 		<td><br><br>
@@ -52,3 +52,14 @@ if(isset($_GET['productID'])){
 	</div></div>";
 }
 ?>
+<script type='text/javascript'>
+	$(document).ready(function(){
+		$("#save").click(function(){
+			var pName=$("#pName").val();
+			var pBrand=$("#pBrand").val();
+			var pPrice=$("#pPrice").val();
+			var pVisible=$("#pVisible").val();
+			var pYear=$("#pYear").val();
+		});
+	});
+</script>
