@@ -169,5 +169,8 @@ $("#msg").fadeOut(500);
 });
 }
 });
+$("#oldPassword").change(function(){
+	
+});
 });
 </script>
