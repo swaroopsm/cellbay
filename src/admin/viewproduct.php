@@ -5,6 +5,7 @@ if(isset($_GET['productID'])){
 	$id=$_GET['productID'];
 	$pobj=new products();
 	$pobj->view($id);
+	echo "<input type='hidden' value='$id' id='pID'/>";
 	echo "<div style='width: 550px;'><h5>".$pobj->getBrand()." ".$pobj->getName()."</h5><hr><div style='float: left;width: 250px;'><img class='thumbnail' src='../$uploads/".$pobj->getImage()."' style='width: 200px;height: 200px;border: 1px solid #dedede;padding:10px; '/></div>
 	<div	style='font-size: 13px;'>
 	
@@ -49,6 +50,7 @@ if(isset($_GET['productID'])){
 		<tr>
 		<td><br><br>
 	</tr>
+	<b id='test'></b>
 	</div></div>";
 }
 ?>
@@ -60,9 +62,12 @@ if(isset($_GET['productID'])){
 			var pPrice=$("#pPrice").val();
 			var pVisible=$("#pVisible").val();
 			var pYear=$("#pYear").val();
-			$.post("response.php?module=updateProduct",{pName: pName, pBrand: pBrand, pPrice: pPrice, pVisible: pVisible, pYear: pYear},
+			var pID=$("#pID").val();
+			$.post("response.php?module=updateProduct",{pID: pID, pName: pName, pBrand: pBrand, pPrice: pPrice, pVisible: pVisible, pYear: pYear},
 			function(data){
-				alert(data);
+				if(data==1){
+					$("b#test").html("<center><div class='alert-message success'>Changes done!</div></center>").hide().fadeIn(500);
+					}
 			});
 		});
 	});
