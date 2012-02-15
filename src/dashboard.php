@@ -80,6 +80,13 @@ if(checkSession('loggedin')==true)
 <script type="text/javascript">
 $(document).ready(function(){
 $('a.dropdown-toggle').click(function()  {$('li.dropdown').toggleClass('open') } );
+$("#settings").click(function(){
+	$.post("ui.php?module=settings",{},
+	function(data){	
+		$("#ui").html(data).hide().fadeIn(500);
+	});
+	return false;
+});
 });
 </script>
   </head>
@@ -122,7 +129,7 @@ $('a.dropdown-toggle').click(function()  {$('li.dropdown').toggleClass('open') }
           <h1><?php echo "Welcome ".$_SESSION['uname']."!"; ?></h1>
         </div>
         <div class="row">
-          <div class="span10">
+          <div class="span10" id='ui'>
             <h2>Main content</h2>
           </div>
           <div class="span4">
