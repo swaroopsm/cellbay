@@ -127,7 +127,7 @@ case 'viewProdByID': $pid=$_GET['pid'];
 		<tr>
 			<td>Old Password: 
 			<td><input type='password' id='oldPassword'/>
-			<td>
+			<td id='oldMsg'></td>
 		</tr>
 		<tr>
 			<td>New Password: 
@@ -170,7 +170,17 @@ $("#msg").fadeOut(500);
 }
 });
 $("#oldPassword").change(function(){
-	
+	var old=$("#oldPassword").val();
+	$.post("response.php?module=checkPwd",{oldPassword: old},
+	function(data){
+		if(data==1){
+			$("#oldMsg").html("<b style='color: green;'>Correct!</b>").hide().fadeIn(500);
+		}
+		else{
+			$("#oldMsg").html("<b style='color: red;'>Incorrect!</b>").hide().fadeIn(500);
+			
+		}
+});
 });
 $(".removeProd").click(function(){
 	var pid=$(this).attr("href");
