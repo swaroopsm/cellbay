@@ -175,10 +175,13 @@ $("#oldPassword").change(function(){
 	function(data){
 		if(data==1){
 			$("#oldMsg").html("<b style='color: green;'>Correct!</b>").hide().fadeIn(500);
+			$("#saveAccount").html("Save Settings").hide().show();
+			$("#saveAccount").attr("disabled",false);
 		}
 		else{
 			$("#oldMsg").html("<b style='color: red;'>Incorrect!</b>").hide().fadeIn(500);
-			
+			$("#saveAccount").html("Invalid Password").hide().show();
+			$("#saveAccount").attr("disabled",true);
 		}
 });
 });
@@ -193,7 +196,7 @@ $(".removeProd").click(function(){
 	});
 });
 $("#saveAccount").click(function(){
-	
+	alert(":)");
 });
 });
 </script>
