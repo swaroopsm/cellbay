@@ -2,6 +2,7 @@
 if(isset($_GET['module'])){
 include("includes/functions.php");
 include("admin/class.products.php");
+include("includes/class.users.php");
 $module=$_GET['module'];
 switch($module){
 case 'getPhoneBrand': $brand=$_POST['brand'];
@@ -106,6 +107,36 @@ if(checkSession('loggedin')){
 </div>
 <?php
 break;
+
+case 'settings': $uobj=new users(); 
+								 $uobj->view($_SESSION['uid']);
+?>
+<div id='respMsg'></div>		
+	<h4>Account Settings</h4>
+	<table style='font-size: 14px;'>
+		<tr>
+			<td>User ID: 
+			<td><?php echo $uobj->getUEmail(); ?>
+			<td>
+		</tr>
+		<tr>
+			<td>Old Password: 
+			<td><input type='password' id='oldPassword'/>
+			<td>
+		</tr>
+		<tr>
+			<td>New Password: 
+			<td><input type='password' id='newPassword'/>
+			<td>
+		</tr>
+		<tr>
+			<td><td>
+			<td><button id='saveAccount' class='btn success'>Save Settings</button>
+		</tr>
+			</table>
+
+
+<?php
 }
 }
 ?>
