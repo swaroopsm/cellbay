@@ -54,6 +54,17 @@ if(isset($_GET['module'])){
 													$pID=$_POST['pID'];
 													echo update("products",array("ProductName","ProductBrand","ProductPrice","ProductYear","ProductVisibility"),array($pName,$pBrand,$pPrice,$pYear,$pVisible),"ProductID=$pID");
 													break;
+													
+		case 'checkPwd': $old=$_POST['oldPassword'];
+										 $old=md5($old);
+										 $row=select("admin","*","AdminID = $_SESSION[aid]");
+										 if($row['AdminPassword']==$old){
+										 	echo 1;
+										 }
+										 else{
+										 	echo 2;
+										 }
+										 break;
 	}
 }
 ?>
