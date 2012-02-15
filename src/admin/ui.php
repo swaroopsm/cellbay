@@ -174,6 +174,7 @@ $("#oldPassword").change(function(){
 	$.post("response.php?module=checkPwd",{oldPassword: old},
 	function(data){
 		if(data==1){
+			$("#oldPassword").css("border","1px solid #ccc");
 			$("#oldMsg").html("<b style='color: green;'>Correct!</b>").hide().fadeIn(500);
 			$("#saveAccount").html("Save Settings").hide().show();
 			$("#saveAccount").attr("disabled",false);
@@ -196,7 +197,34 @@ $(".removeProd").click(function(){
 	});
 });
 $("#saveAccount").click(function(){
-	alert(":)");
+	var newPassword=$("#newPassword").val();
+	var oldPassword=$("#oldPassword").val();
+	if(newPassword==''|| oldPassword==''){
+		if(oldPassword=='' && newPassword==''){
+			$("#oldPassword").css("border","1px solid red");
+			$("#newPassword").css("border","1px solid red");
+		}
+		else if(newPassword==''){
+			$("#newPassword").css("border","1px solid red");
+		}
+		else if(oldPassword==''){
+			$("#oldPassword").css("border","1px solid red");
+		}
+	}
+	else{
+		if(newPassword!=''){
+			$("#newPassword").css("border","1px solid #ccc");
+		}
+	if(oldPassword!=''){
+			$("#oldPassword").css("border","1px solid #ccc");
+		}
+	}
+		if(newPassword!='' && oldPassword!=''){
+			$.post("response.php?module=changePassword",{newPassword: newPassword},
+	function(data){
+		alert(data);
+	});
+		}
 });
 });
 </script>
