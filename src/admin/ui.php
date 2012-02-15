@@ -116,7 +116,7 @@ case 'viewProdByID': $pid=$_GET['pid'];
 	case 'settings': $row=select("admin","*","AdminID=$_SESSION[aid]");
 	
 	?>
-	
+	<div id='respMsg'></div>		
 	<h4>Account Settings</h4>
 	<table style='font-size: 14px;'>
 		<tr>
@@ -221,8 +221,16 @@ $("#saveAccount").click(function(){
 		if(newPassword!='' && oldPassword!=''){
 			$.post("response.php?module=changePassword",{newPassword: newPassword},
 	function(data){
-		alert(data);
+		if(data==1){
+			$("div#respMsg").html("<div class='alert-message success'><p><strong>Your account settings have been updated!</strong></p></div>").hide().fadeIn(500);
+		}
+		else{
+			$("div#respMsg").html("<div class='alert-message danger'><p><strong>Error. Please try again later!</strong></p></div>").hide().fadeIn(500);
+		}
 	});
+	setTimeout(function(){
+		$("#respMsg").fadeOut(500);
+	},3000);
 		}
 });
 });
