@@ -45,7 +45,15 @@ if(isset($_GET['module'])){
 										}
 										echo $cc;
 										break;
-				
+										
+		case 'updateProduct': $pName=$_POST['pName'];
+													$pBrand=$_POST['pBrand'];
+													$pPrice=$_POST['pPrice'];
+													$pYear=$_POST['pYear'];
+													$pVisible=$_POST['pVisible'];
+													$pID=$_POST['pID'];
+													echo update("products",array("ProductName","ProductBrand","ProductPrice","ProductYear","ProductVisibility"),array($pName,$pBrand,$pPrice,$pYear,$pVisible),"ProductID=$pID");
+													break;
 	}
 }
 ?>
