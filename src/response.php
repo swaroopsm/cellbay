@@ -56,6 +56,17 @@ else{
 													$cc=delete("orders",$where);
 													echo $cc;
 													break;
+													
+			case 'checkPwd': $old=$_POST['oldPassword'];
+											 $old=md5($old);
+											 $row=select("users","*","UserID = $_SESSION[uid]");
+											 if($row['UserPassword']==$old){
+											 	echo 1;
+											 }
+											 else{
+											 	echo 2;
+											 }
+											 break;
 		}
 	}
 }
