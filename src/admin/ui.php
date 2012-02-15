@@ -136,7 +136,7 @@ case 'viewProdByID': $pid=$_GET['pid'];
 		</tr>
 		<tr>
 			<td><td>
-			<td><button class='btn success'>Save Settings</button>
+			<td><button id='saveAccount' class='btn success'>Save Settings</button>
 		</tr>
 			</table>
 	
@@ -181,6 +181,9 @@ $(".removeProd").click(function(){
 			$("#prodRow"+pid).fadeOut(500);
 		}
 	});
+});
+$("#saveAccount").click(function(){
+	
 });
 });
 </script>
