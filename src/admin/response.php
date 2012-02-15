@@ -65,6 +65,15 @@ if(isset($_GET['module'])){
 										 	echo 2;
 										 }
 										 break;
+										 
+		case 'changePassword': $pwd=$_POST['newPassword'];
+													 $pwd=md5($pwd);
+													 $cc=update("admin",array('AdminPassword'),array($pwd),"AdminID=$_SESSION[aid]");
+													 if($cc)
+													 	echo 1;
+													 else
+													 	echo 0;
+													 break;
 	}
 }
 ?>
