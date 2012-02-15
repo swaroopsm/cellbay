@@ -127,7 +127,7 @@ case 'viewProdByID': $pid=$_GET['pid'];
 		<tr>
 			<td>Old Password: 
 			<td><input type='password' id='oldPassword'/>
-			<td id='oldMsg'></td>
+			<td>
 		</tr>
 		<tr>
 			<td>New Password: 
@@ -175,12 +175,11 @@ $("#oldPassword").change(function(){
 	function(data){
 		if(data==1){
 			$("#oldPassword").css("border","1px solid #ccc");
-			$("#oldMsg").html("<b style='color: green;'>Correct!</b>").hide().fadeIn(500);
 			$("#saveAccount").html("Save Settings").hide().show();
 			$("#saveAccount").attr("disabled",false);
 		}
 		else{
-			$("#oldMsg").html("<b style='color: red;'>Incorrect!</b>").hide().fadeIn(500);
+			$("#oldPassword").css("border","1px solid red");
 			$("#saveAccount").html("Invalid Password").hide().show();
 			$("#saveAccount").attr("disabled",true);
 		}
