@@ -137,6 +137,62 @@ case 'settings': $uobj=new users();
 
 
 <?php
+break;
+
+case 'profile': $uobj=new users();
+								$uobj->view($_SESSION['uid']);
+?>
+<h3>My Profile</h3>
+<table>
+<tr>
+	<td><b>My Name: </b>
+	<td><?php echo $uobj->getUName(); ?>
+	<td>
+	<td>
+	<td>
+	<td>
+	<td>
+</tr>
+<tr>
+	<td><b>My Email: </b>
+	<td><input type='text' value="<?php echo $uobj->getUEmail(); ?>" id='myEmail'/>
+	<td>
+	<td>
+	<td>
+	<td>
+	<td>
+</tr>
+<tr>
+	<td><b>Gender: </b>
+	<td>
+		<select id='myGender' style='background-color: #fff;'>
+		<?php
+			$g=$uobj->getUGender();
+			if($g=='Male'){
+				echo "<option value='' selected='selected'>$g</option>";
+				echo "<option value='Female'>Female</option>";
+			}
+			else if($g=='Female'){
+				echo "<option value='' selected='selected'>$g</option>";
+				echo "<option value='Male'>Male</option>";
+			}
+			else{
+				echo "<option value='' selected='selected'>-Select-</option>";
+				echo "<option value='Male'>Male</option>";
+				echo "<option value=''>Female</option>";
+			}
+		?>
+		</select>
+	</td>
+	<td>
+	<td>
+	<td>
+	<td>
+	<td>
+</tr>
+</table>
+<?php
+break;
 }
 }
 ?>
