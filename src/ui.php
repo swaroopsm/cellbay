@@ -231,7 +231,7 @@ $("#saveProfile").click(function(){
 	var email=$("#myEmail").val();
 	var gender=$("#myGender").val();
 	var dob=$("#myDOB").val();
-	$.post("response.php?module=updateProfile",{email: email, gender: gender,dob: dob},
+	$.post("response.php?misc=updateProfile",{email: email, gender: gender,dob: dob},
 	function(data){
 		alert(data);
 	});
