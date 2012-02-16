@@ -76,6 +76,26 @@ else{
 															$cc=update("users",array('UserEmail','UserDOB','UserGender'),array($email,$dob,$gender),"UserID=$_SESSION[uid]");
 															echo $cc;
 															break;
+															
+				case 'changePassword': $pwd=$_POST['newPassword'];
+															 $pwd=md5($pwd);
+															 $cc=update("users",array('UserPassword'),array($pwd),"UserID=$_SESSION[uid]");
+															 if($cc)
+															 	echo 1;
+															 else
+															 	echo 0;
+															 break;
+															 
+				case 'checkPwd': $old=$_POST['oldPassword'];
+												 $old=md5($old);
+												 $row=select("admin","*","AdminID = $_SESSION[aid]");
+												 if($row['AdminPassword']==$old){
+												 	echo 1;
+												 }
+												 else{
+												 	echo 2;
+												 }
+												 break;
 		}
 	}
 }
