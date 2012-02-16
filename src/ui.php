@@ -143,6 +143,7 @@ case 'profile': $uobj=new users();
 								$uobj->view($_SESSION['uid']);
 ?>
 <h3>My Profile</h3>
+<div id='msg'></div>
 <table>
 <tr>
 	<td><b>My Name: </b>
@@ -239,8 +240,13 @@ $("#saveProfile").click(function(){
 	var dob=$("#myDOB").val();
 	$.post("response.php?misc=updateProfile",{email: email, gender: gender,dob: dob},
 	function(data){
-		alert(data);
+		if(data==1){
+			$("div#msg").html("<div class='alert-message success'>Changes to your profile have been updated</div>").hide().fadeIn(500);
+		}
 	});
+	setTimeout(function(){
+			$("div#msg").fadeOut(500);
+		},3000);
 });
 });
 </script>
