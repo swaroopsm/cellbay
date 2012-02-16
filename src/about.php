@@ -79,8 +79,16 @@ $('a.dropdown-toggle').click(function()  {$('li.dropdown').toggleClass('open') }
           <h1>About Us</h1>
         </div>
         <div class="row">
-          <div class="span9">
-<p style="font-family: myfont;">hjihj</p>
+          <div class="span15">
+						<p  style='font-size: 14px;'>
+							CellBay is an mobile store wherein you can but mobile products online that makes you save a lot of time. CellBay was launched in 2012 to ease the procurement of mobile phones which has become a very essential device in the present times. Our Headquarters is based in Bangalore, India.	
+						</p>
+						<p  style='font-size: 14px;'>
+							Our goal is "Your friendly Mobilehood!"
+						</p>
+						<p  style='font-size: 14px;'>
+							Sign up is absolutely free. You need to sign up in order to enjoy the benefits of CellBay!
+						</p>
           </div>
         </div>
       </div>
