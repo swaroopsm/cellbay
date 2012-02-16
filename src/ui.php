@@ -192,7 +192,13 @@ case 'profile': $uobj=new users();
 </tr>
 <tr>
 	<td><b>My Date of Birth: </b>
-	<td><input type='text' value="<?php echo $uobj->getUDOB(); ?>" id='myDOB'/>
+	<?php
+		$dob=$uobj->getUDOB();
+		if($dob=='0000-00-00'){
+			echo "<td><input type='text' value='' placeholder='YYYY-MM-DD'/>";
+		}else{
+	?>
+	<td><input type='text' value="<?php echo $uobj->getUDOB(); ?>" id='myDOB'/> <?php } ?>
 	<td>
 	<td>
 	<td>
