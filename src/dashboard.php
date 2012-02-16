@@ -135,19 +135,24 @@ $("#ui").load("ui.php?module=profile").hide().fadeIn(500);
             <h2>Recent Activity</h2>
             <?php
             	$oid=$uobj->getLoid();
+             	$num=mysql_num_rows(mysql_query("select * from orders WHERE OrderID=$oid"));
+            	if($num<1){
+            		echo "<br><center><h3>All Orders have been cleared. You will receive your product very soon</h3></center>";
+            	}else{
             	$row2=select("orders","*","OrderID=$oid");
             	$pid=$row2['ProductID'];
             	$pobj=new products();
             	$pobj->view($pid);
 							echo "<div style='width: 400px;'>
 								<div class='modal-header' style='float: left;'>
-								<h4>".$pobj->getBrand()." ".$pobj->getName()."</h4>
+								<h4>".$pobj->getBrand()." ".$pobj->getName()."(<small>Order pending...</small>)</h4>
 								<h5>Order Date: ".$row2['OrderDate']."</h5>";
 								echo "</div>";
 								echo "<div class='modal-body'><div style='float: left;width: 300px;border:1px solid #eeeeee;padding: 	5px;'><img width='300' height='250' src='$uploads/".$pobj->getImage()."'/></div>
 								";
 								echo "</div>
 						</div>";            
+            }
             
             ?>
           </div>
