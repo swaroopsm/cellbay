@@ -83,11 +83,7 @@ if(checkSession('loggedin')==true)
 $(document).ready(function(){
 $('a.dropdown-toggle').click(function()  {$('li.dropdown').toggleClass('open') } );
 $("#settings").click(function(){
-	$.post("ui.php?module=settings",{},
-	function(data){	
-		$("#ui").html(data).hide().fadeIn(500);
-	});
-	return false;
+	$("#ui").load("ui.php?module=settings").hide().fadeIn(500);
 });
 $("#profile").click(function(){
 $("#ui").load("ui.php?module=profile").hide().fadeIn(500);
@@ -116,8 +112,6 @@ $("#ui").load("ui.php?module=profile").hide().fadeIn(500);
 <li class="dropdown" id="login">
 <a class="dropdown-toggle" id="" href="#">Account</a>
 <ul class="dropdown-menu" style="width: 300px;padding-left: 10px;padding-top: 10px;">
-<li><a href="#" id="settings">Settings</a></li>
-<li class='divider'></li>
 <li><a href="response.php?misc=logout">Log Out!</a></li>
 </ul>
 </li>
@@ -162,6 +156,9 @@ $("#ui").load("ui.php?module=profile").hide().fadeIn(500);
             <table class="table">
             	<tr>
             		<td>&raquo; <a href="#" id="profile">Profile</a></li>
+            	</tr>
+            	<tr>
+            		<td>&raquo; <a href="#" id="settings">Settings</a></li>
             	</tr>
             </table>
           </div>
