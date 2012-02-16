@@ -57,7 +57,6 @@ case 'addtocart': $pid=$_POST['pid'];
 									$date=date("Y-m-d");
 									$fields=array("ProductID","UserID","OrderDate");
 									$values=array("$pid","$uid","$date");
-									update("users",array("LastOrderProductID"),array($pid),"UserID=$_SESSION[uid]");
 									echo insert("orders",$fields,$values);
 									break;
 									
