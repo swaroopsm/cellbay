@@ -1,5 +1,6 @@
 <?php
 include("includes/functions.php");
+include("includes/class.users.php");
 if(checkSession('loggedin')==true)
 {
 ?>
@@ -126,10 +127,13 @@ $("#ui").load("ui.php?module=profile").hide().fadeIn(500);
       </div>
     </div>
     <div class="container">
-
+			<?php
+				$uobj=new users();
+				$uobj->view($_SESSION['uid']);
+			?>
       <div class="content">
         <div class="page-header">
-          <h1><?php echo "Welcome ".$_SESSION['uname']."!"; ?></h1>
+          <h1><?php echo "Welcome ".$uobj->getUName()."!"; ?></h1>
         </div>
         <div class="row">
           <div class="span10" id='ui'>
