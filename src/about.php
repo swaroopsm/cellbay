@@ -44,9 +44,7 @@ $('a.dropdown-toggle').click(function()  {$('li.dropdown').toggleClass('open') }
           <ul class="nav">
 
             <li><a href="index.php">Home</a></li>
-
-           
-
+						<li><a href="products.php">Products</a></li>
             <li class="active"><a href="about.php">About</a></li>
             <li><a href="#contact">Contact</a></li>
 
