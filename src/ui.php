@@ -190,6 +190,32 @@ case 'profile': $uobj=new users();
 	<td>
 	<td>
 </tr>
+<tr>
+	<td><b>My Date of Birth: </b>
+	<td><input type='text' value="<?php echo $uobj->getUDOB(); ?>" id='myEmail'/>
+	<td>
+	<td>
+	<td>
+	<td>
+	<td>
+</tr>
+<tr>
+	<td><b>Member Since: </b>
+	<td><?php echo $uobj->getUJDate() ?>
+	<td><input type='hidden' id='uid' value='<?php echo $_SESSION['uid'] ?>'/>
+	<td>
+	<td>
+	<td>
+	<td>
+</tr>
+<tr>
+	<td>
+	<td>
+	<td>
+	<td>
+	<td>
+	<td><button id='saveProfile' class='btn success'>Update</button>
+</tr>
 </table>
 <?php
 break;
@@ -222,6 +248,9 @@ $(".cross").click(function(){
 		if(data==1){
 			$("#row"+oid).fadeOut(500);
 		}
+	});
+	$("#saveProfile").click(function(){
+		
 	});
 });
 </script>
