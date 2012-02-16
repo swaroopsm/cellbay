@@ -76,7 +76,7 @@ $("div#msg").slideUp(500);
            
 
             <li><a href="about.php">About</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a  data-keyboard="true"  data-backdrop="true" data-controls-modal="modal-contact" href="#contact">Contact</a></li>
 	    
           </ul>
 <tr>
@@ -231,7 +231,27 @@ $("div#msg").slideUp(500);
 </div>
     
 </div>
-    </div> <!-- /container -->
+
+<div id="modal-contact" class="modal hide fade in" style="display: none;border: 8px solid #ccc;">
+<div class="modal-header">
+<a class="close" href="#">×</a>
+<h3>Contact</h3>
+</div>
+<div class="modal-body">
+<div style='margin-left: 290px;'>
+<p>
+	<strong>Email: </strong>info[at]cellbay.in
+</p>
+<p>
+	<strong>Phone: </strong>+91 9845000000
+</p>
+<p>
+	<strong>Address: </strong> #2, Near Hotel Empire<br><span style='margin-left: 60px;'>Koramangala,Bangalore</span><br><span style='margin-left: 60px;'>India	</span>
+</p>
+</div>
+<img style='float: left;width: 300px;margin-top: -110px;' src='images/contact.jpeg'/>
+</div>
+</div> <!-- /container -->
 
   </body>
 </html>
