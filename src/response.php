@@ -68,6 +68,14 @@ else{
 											 	echo 2;
 											 }
 											 break;
+											 
+				case 'updateProfile': $email=$_POST['email'];
+															$dob=$_POST['dob'];
+															$dob=date('Y-m-d',strtotime($dob));
+															$gender=$_POST['gender'];
+															$cc=update("users",array('UserEmail','UserDOB','UserGender'),array($email,$dob,$gender),"UserID=$_SESSION[uid]");
+															echo $cc;
+															break;
 		}
 	}
 }
