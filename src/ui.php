@@ -248,6 +248,61 @@ $("#saveProfile").click(function(){
 			$("div#msg").fadeOut(500);
 		},3000);
 });
+$("#saveAccount").click(function(){
+	var newPassword=$("#newPassword").val();
+	var oldPassword=$("#oldPassword").val();
+	if(newPassword==''|| oldPassword==''){
+		if(oldPassword=='' && newPassword==''){
+			$("#oldPassword").css("border","1px solid red");
+			$("#newPassword").css("border","1px solid red");
+		}
+		else if(newPassword==''){
+			$("#newPassword").css("border","1px solid red");
+		}
+		else if(oldPassword==''){
+			$("#oldPassword").css("border","1px solid red");
+		}
+	}
+	else{
+		if(newPassword!=''){
+			$("#newPassword").css("border","1px solid #ccc");
+		}
+	if(oldPassword!=''){
+			$("#oldPassword").css("border","1px solid #ccc");
+		}
+	}
+		if(newPassword!='' && oldPassword!=''){
+			$.post("response.php?misc=changePassword",{newPassword: newPassword},
+	function(data){
+		if(data==1){
+			$("div#respMsg").html("<div class='alert-message success'><p><strong>Your account settings have been updated!</strong></p></div>").hide().fadeIn(500);
+		}
+		else{
+			$("div#respMsg").html("<div class='alert-message danger'><p><strong>Error. Please try again later!</strong></p></div>").hide().fadeIn(500);
+		}
+	});
+	setTimeout(function(){
+		$("#respMsg").fadeOut(500);
+	},3000);
+		}
+});
+$("#oldPassword").change(function(){
+	var old=$("#oldPassword").val();
+	$.post("response.php?misc=checkPwd",{oldPassword: old},
+	function(data){
+		if(data==1){
+			$("#oldPassword").css("border","1px solid #ccc");
+			$("#saveAccount").html("Save Settings").hide().show();
+			$("#saveAccount").attr("disabled",false);
+		}
+		else{
+			$("#oldPassword").css("border","1px solid red");
+			$("#saveAccount").html("Invalid Password").hide().show();
+			$("#saveAccount").attr("disabled",true);
+		}
+});
+});
+
 });
 </script>
 <script type="text/javascript">
