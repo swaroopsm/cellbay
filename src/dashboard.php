@@ -87,6 +87,9 @@ $("#settings").click(function(){
 	});
 	return false;
 });
+$("#profile").click(function(){
+$("#ui").load("ui.php?module=profile").hide().fadeIn(500);
+});
 });
 </script>
   </head>
@@ -100,10 +103,10 @@ $("#settings").click(function(){
           <ul class="nav">
 
            
-            <li class="active"><a href="#">Home</a></li>
+            <li class="active"><a href="index.php">Home</a></li>
 
             <li><a href="products.php">Products</a></li>
-            <li><a href="#contact">Help</a></li>
+            <li><a href="#help">Help</a></li>
 
           </ul>
 
@@ -133,8 +136,12 @@ $("#settings").click(function(){
             <h2>Main content</h2>
           </div>
           <div class="span4">
-            <h3>Secondary content</h3>
-            <i class="icon-search">s</i>
+            <h3>Quick Links</h3>
+            <table class="table">
+            	<tr>
+            		<td>&raquo; <a href="#" id="profile">Profile</a></li>
+            	</tr>
+            </table>
           </div>
         </div>
       </div>
