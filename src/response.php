@@ -48,6 +48,7 @@ else{
 			case 'confirmOrder': $oid=$_POST['oid'];
 													 $where="OrderID=$oid";
 													 $cc=update("orders",array("OrderStatus"),array(1),$where);
+													 update("users",array("LastOrderID"),array($oid),"UserID=$_SESSION[uid]");
 													 echo $cc;
 													 break;
 													 
