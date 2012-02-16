@@ -192,7 +192,7 @@ case 'profile': $uobj=new users();
 </tr>
 <tr>
 	<td><b>My Date of Birth: </b>
-	<td><input type='text' value="<?php echo $uobj->getUDOB(); ?>" id='myEmail'/>
+	<td><input type='text' value="<?php echo $uobj->getUDOB(); ?>" id='myDOB'/>
 	<td>
 	<td>
 	<td>
@@ -228,7 +228,13 @@ break;
 <script type="text/javascript">
 $(document).ready(function(){
 $("#saveProfile").click(function(){
-
+	var email=$("#myEmail").val();
+	var gender=$("#myGender").val();
+	var dob=$("#myDOB").val();
+	$.post("response.php?module=updateProfile",{email: email, gender: gender,dob: dob},
+	function(data){
+		alert(data);
+	});
 });
 });
 </script>
@@ -257,8 +263,4 @@ $(".cross").click(function(){
 		}
 	});
 });
-$("#saveProfile").click(function(){
-		//var uid=$("#uid").val();
-		alert(":)");
-	});
 </script>
