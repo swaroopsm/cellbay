@@ -201,8 +201,8 @@ case 'profile': $uobj=new users();
 </tr>
 <tr>
 	<td><b>Member Since: </b>
-	<td><?php echo $uobj->getUJDate() ?>
-	<td><input type='hidden' id='uid' value='<?php echo $_SESSION['uid'] ?>'/>
+	<td><?php echo $uobj->getUJDate(); ?>
+	<td><input type='hidden' id='uid' value="<?php echo $_SESSION['uid']; ?>"/>
 	<td>
 	<td>
 	<td>
@@ -225,6 +225,13 @@ break;
 <div id="modal-from-dom2"  class="modal hide fade in" style="display: none;border: 8px solid #ccc;">
 
 </div>
+<script type="text/javascript">
+$(document).ready(function(){
+$("#saveProfile").click(function(){
+
+});
+});
+</script>
 <script type="text/javascript">
 $('a[rel*=facebox]').facebox() ;
 $(".thumbnail").click(function(){
@@ -249,8 +256,9 @@ $(".cross").click(function(){
 			$("#row"+oid).fadeOut(500);
 		}
 	});
-	$("#saveProfile").click(function(){
-		
-	});
 });
+$("#saveProfile").click(function(){
+		//var uid=$("#uid").val();
+		alert(":)");
+	});
 </script>
