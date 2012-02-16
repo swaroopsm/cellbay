@@ -103,7 +103,7 @@ $("#ui").load("ui.php?module=profile").hide().fadeIn(500);
           <ul class="nav">
 
            
-            <li class="active"><a href="index.php">Home</a></li>
+            <li class="active"><a href="dashboard.php">Home</a></li>
 
             <li><a href="products.php">Products</a></li>
             <li><a href="#help">Help</a></li>
