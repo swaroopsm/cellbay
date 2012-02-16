@@ -1,6 +1,7 @@
 <?php
 include("includes/functions.php");
 include("includes/class.users.php");
+include("admin/class.products.php");
 if(checkSession('loggedin')==true)
 {
 ?>
@@ -137,7 +138,24 @@ $("#ui").load("ui.php?module=profile").hide().fadeIn(500);
         </div>
         <div class="row">
           <div class="span10" id='ui'>
-            <h2>Main content</h2>
+            <h2>Recent Activity</h2>
+            <?php
+            	$oid=$uobj->getLoid();
+            	$row2=select("orders","*","OrderID=$oid");
+            	$pid=$row2['ProductID'];
+            	$pobj=new products();
+            	$pobj->view($pid);
+							echo "<div style='width: 400px;'>
+								<div class='modal-header' style='float: left;'>
+								<h4>".$pobj->getBrand()." ".$pobj->getName()."</h4>
+								<h5>Order Date: ".$row2['OrderDate']."</h5>";
+								echo "</div>";
+								echo "<div class='modal-body'><div style='float: left;width: 300px;border:1px solid #eeeeee;padding: 	5px;'><img width='300' height='250' src='$uploads/".$pobj->getImage()."'/></div>
+								";
+								echo "</div>
+						</div>";            
+            
+            ?>
           </div>
           <div class="span4">
             <h3>Quick Links</h3>
