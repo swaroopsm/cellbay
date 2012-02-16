@@ -169,11 +169,11 @@ case 'profile': $uobj=new users();
 		<?php
 			$g=$uobj->getUGender();
 			if($g=='Male'){
-				echo "<option value='' selected='selected'>$g</option>";
+				echo "<option value='$g' selected='selected'>$g</option>";
 				echo "<option value='Female'>Female</option>";
 			}
 			else if($g=='Female'){
-				echo "<option value='' selected='selected'>$g</option>";
+				echo "<option value='$g' selected='selected'>$g</option>";
 				echo "<option value='Male'>Male</option>";
 			}
 			else{
